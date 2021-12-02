@@ -1,0 +1,147 @@
+.wrapper-slider {
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 750px;
+  /* overflow: hidden; */
+}
+  
+.slide {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient {
+  width: 1000px;
+  height: 750px;
+}
+
+.first-slide {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/monaliza.jpg);
+}
+
+.second-slide {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome2.jpg);
+}
+
+.third-slide {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome3.jpg);
+}
+
+.fourth-slide {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome4.jpg);
+}
+
+.fifth-slide {
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome5.jpg);
+}
+
+.paginator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  height: 120px;
+  background: #030303;
+  margin: 0 auto;
+}
+
+.fraction {
+  display: flex;
+  column-gap: 10px;
+} 
+
+.current-fraction, .from-fraction, .final-fraction {
+  align-self: center;
+}
+
+.current-fraction span, .final-fraction span{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 44px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+} 
+
+.from-fraction span {
+  width: 6px;
+  height: 40px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 44px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+
+.bullets {
+  display: flex;
+  column-gap: 25px;
+}
+
+.bullet {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  cursor: pointer;
+} 
+
+.bullet.active {
+  background: #D2B183;
+}
+
+.bullet:hover {
+  background: #9D8665;
+}
+
+.arrows {
+  display: flex;
+  column-gap: 20px;
+}
+
+.prev-arrow, .next-arrow {
+  align-self: center;
+  cursor: pointer;
+}
+
+.prev-arrow {
+  background: url(./assets/png/prev-but.png);
+  width: 30px;
+  height: 8px;
+}
+
+.next-arrow {
+  background: url(./assets/png/prev-but.png);
+  width: 30px;
+  height: 8px;
+  transform: rotate(-180deg);
+}
+
+.next-arrow:hover { 
+  background: #D2B183; 
+  background: url(./assets/png/btn-hov.png);
+  transform: rotate(-180deg);
+} 
+ 
+.prev-arrow:hover {
+  background: url(./assets/png/btn-hov.png);
+} 
+

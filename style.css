@@ -62,6 +62,14 @@
     color: #FFFFFF;
 }
 
+.nav-description li a:hover {
+    color: #9D8665;
+}
+
+.nav-description li a:active{
+    color: #7E6C51;
+}
+
 .main {
     width: 1920px;
     margin: 0 auto;
@@ -76,16 +84,33 @@
 .welcome {
     max-width: 1440px;
     height: 810px;
-    background-image: url("assets/img/monaliza.jpg");
-    background-position: calc(100% - 0%) calc(100% - 95%);
-    background-repeat: no-repeat;
-    /* background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%); */
+    display: flex;
+    position: relative;
+    /* background-image: url("assets/img/monaliza.jpg"); 
+    background-position: calc(100% - 0%) calc(100% - 95%); */
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
 }
 
-.welcome-description {
-    position: relative;
+/* slider style */
+
+.slider{
     max-width: 1440px;
     height: 810px;
+    /* background-position: calc(100% - 0%) calc(100% - 95%);
+    background-repeat: no-repeat;
+    position: absolute; */
+}
+
+/* .slide img {
+
+}  */
+
+.welcome-description {
+    /* position: relative; */
+    max-width: 1440px;
+    height: 810px;
+    flex: 0 1 auto;
+    z-index: 2;
 }
 
 .welcome-description h1 {
@@ -98,6 +123,11 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.welcome-description h1:hover {
+    color: #9D8665;
+    cursor: default;
 }
 
 .welcome-description p {
@@ -119,6 +149,10 @@
     border-radius: 10px;
 }
 
+.discover-btn:hover {
+    background: #9D8665;
+}
+
 .discover-btn a {
     height: 75px;
     font-family: Roboto;
@@ -137,11 +171,10 @@
 
 .slider {
     position: absolute;
-    width: 600px;
-    height: 120px;
     right: 0px;
     bottom: 0px;
     background: #030303;
+    overflow: hidden;
 }
 
 .virtual-tour {
@@ -166,7 +199,12 @@
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
+    color: #000000;
+}
+
+.visiting-section h1:hover {
     color: #9D8665;
+    cursor: default;
 }
 
 .line {
@@ -206,7 +244,6 @@
     position: relative;
 } 
 
-
 .line-place:after {
     display: block;
     position: absolute;
@@ -221,7 +258,6 @@
 .place-info:hover .line-place:after {
     width: 100%;
 } 
-
 
 .panorama-info {
     font-family: Roboto;
@@ -282,6 +318,11 @@
     padding-bottom: 25px;
 }
 
+.description-picture h1:hover {
+   cursor: default;
+   color: #9D8665;
+}
+
 .line-picture-explore {
     width: 660px;
     height: 3px;
@@ -321,6 +362,11 @@
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
+    color: #000000;
+}
+
+.title-video-journey h1:hover {
+    cursor: default;
     color: #9D8665;
 }
 
@@ -369,6 +415,11 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.gallery h1:hover {
+    cursor: default;
+    color: #9D8665;
 }
 
 .picture-container {
@@ -420,6 +471,11 @@
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
+    color: #000000;
+}
+
+.buy-tickets-h1 h1:hover {
+    cursor: default;
     color: #9D8665;
 }
 
@@ -609,6 +665,11 @@
     color: #FFFFFF;
 }
 
+.buy-button:hover {
+    background: #9D8665;
+    color: #000000;
+}
+
 .parallax {
     width: 1920px;
     height: 400px;
@@ -627,8 +688,13 @@
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #9D8665;
+    color: #000000;
     margin-bottom: 25px;
+}
+
+.contacts-h1 h1:hover {
+    cursor: default;
+    color: #9D8665;
 }
 
 .contacts-info h3 {
@@ -694,6 +760,14 @@
     line-height: 26px;
     letter-spacing: 2px;
     color: #FFFFFF;
+}
+
+.nav-description-footer li a:hover {
+    color: #9D8665;
+}
+
+.nav-description-footer li a:active{
+    color: #7E6C51;
 }
 
 .author-data {
