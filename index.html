@@ -7,12 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="galleryMoviesSlider.css">
     <link rel="icon" href="assets/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <title>museum</title>
 </head>
     <body>
@@ -188,9 +190,9 @@
                     </div>
                 </div>
 
-                <div class="picture-explore">
+                <div class="video-jorney">
                     <div class="container">
-                        <section class="section video-jorney" id="video">
+                        <section class="section video-jorney-info" id="video">
                             <div class="title-video-journey">
                                 <div class="video-journey-h1">
                                     <h1>video journey</h1>
@@ -200,15 +202,62 @@
                                         Lisa or Hammurabi's Code</p>
                                 </div>
                             </div>
-                            <div class="video-player">
-                                <video src="assets/video/video.mp4" poster="assets/video/poster.jpg" controls width="1440" height="650"></video>
+
+                            <div class="movies-gallery">
+                                <div class="movies-gallery-wrapper">
+
+                                    <div class="main-movie-slide-row">
+                                        <div class="slide-container active-movie">
+                                            <iframe width="1440" height="735" src="https://www.youtube.com/embed/zp1BXPX8jcU" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="slide-container">
+                                            <iframe width="1440" height="735" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="slide-container">
+                                            <iframe width="1440" height="735" src="https://www.youtube.com/embed/NOhDysLnTvY" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="swiper-slide-container">
+                                            <iframe width="1440" height="735" src="https://www.youtube.com/embed/aWmJ5DgyWPI" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="slide-container">
+                                            <iframe width="1440" height="735" src="https://www.youtube.com/embed/2OR0OCr6uRE" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+
+                                    <div class="mini-movies-gallery-container">
+                                        <div class="mini-movies-slide-row">
+                                            <div class="movie-slide">
+                                                <iframe width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="movie-slide">
+                                                <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="movie-slide">
+                                                <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="movie-slide">
+                                                <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="movie-slide">
+                                                <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>  
+                                        </div>
+                                    </div>
+
+                                    <div class="movies-paginator">
+                                        <div class="prev-movie-arrow"></div>
+                                        <div class="movie-bullets">
+                                            <div class="movie-bullet"></div>
+                                            <div class="movie-bullet"></div>
+                                            <div class="movie-bullet"></div>
+                                            <div class="movie-bullet"></div>
+                                            <div class="movie-bullet"></div>
+                                        </div>
+                                        <div class="next-movie-arrow"></div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div class="video-parts">
-                                <div class="part"></div>
-                                <div class="part"></div>
-                                <div class="part"></div>
-                            </div>
-                            <div class="slaider"></div>
                         </section>
                     </div>
                 </div>
@@ -217,49 +266,49 @@
                     <div class="container">
                         <section class="section gallery" id="gallery">
                             <h1>art gallery</h1>
-                            <div class="picture-container"> -->
+                            <div class="picture-container"> 
                                 <div class="picture-inner-container">
-                                    <div class="grid-item">
-                                        <img src="./assets/img/galery2.jpg" alt="gal-2">
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="./assets/img/galery9.jpg" alt="gal-9">
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="./assets/img/galery4.jpg" alt="gal-4">
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="./assets/img/galery6.jpg" alt="gal-6">
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="./assets/img/galery5.jpg" alt="gal-5">
-                                    </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery1.jpg" alt="gal-1">
                                     </div>
                                     <div class="grid-item">
-                                        <img src="./assets/img/galery8.jpg" alt="gal-8">
+                                        <img src="./assets/img/galery2.jpg" alt="gal-2">
                                     </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery3.jpg" alt="gal-3">
                                     </div>
                                     <div class="grid-item">
+                                        <img src="./assets/img/galery4.jpg" alt="gal-4">
+                                    </div>
+                                    <div class="grid-item">
                                         <img src="./assets/img/galery5.jpg" alt="gal-5">
                                     </div>
                                     <div class="grid-item">
-                                        <img src="./assets/img/galery7.jpg" alt="gal-7">
+                                        <img src="./assets/img/galery6.jpg" alt="gal-6">
                                     </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery7.jpg" alt="gal-7">
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="./assets/img/galery8.jpg" alt="gal-8">
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="./assets/img/galery9.jpg" alt="gal-9">
                                     </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery10.jpg" alt="gal-10">
                                     </div>
                                     <div class="grid-item">
-                                        <img src="./assets/img/galery15.jpg" alt="gal-15">
+                                        <img src="./assets/img/galery11.jpg" alt="gal-11">
                                     </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery12.jpg" alt="gal-12">
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="./assets/img/galery13.jpg" alt="gal-13">
+                                    </div>
+                                    <div class="grid-item">
+                                        <img src="./assets/img/galery14.jpg" alt="gal-14">
                                     </div>
                                     <div class="grid-item">
                                         <img src="./assets/img/galery15.jpg" alt="gal-15">
@@ -300,34 +349,173 @@
                                         </label>
                                     </div>
                                     <div class="amount">
-                                        <h2>Amount</h2>
+                                        <div class="amount-title"><h2>Amount</h2></div>
                                         <div class="input-basic-block">
                                             <p>Basic 18+</p>
                                             <div class="block">
-                                                <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
                                                 <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
                                             </div>
                                         </div>
                                         <div class="input-senior-block">
                                             <p>Senior 65+</p>
                                             <div class="block">
-                                                <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                                                <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
-                                            </div>
-                                            <div class="total">
-                                                <p>Total</p>
-                                                <button class="buy-button">Buy Now</button>
+                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                    <input type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
                                             </div>
                                         </div>
+                                        <div class="total"><p>Total</p></div>
+                                        <div class="buy"><button class="buy-button">Buy Now</button></div>
                                     </div>
                                 </div>
                             </div>
                         </section>
                     </div>
-                    <div class="parallax">
-                        <img src="./assets/png/parallax.png" alt="parallax">
+                    <div class="parallax"></div>
+
+                    <div class="popup" id="popup">
+                        <form class="popup-wrapper"  method="post">
+                            <div class="tickets-date">
+                                <div class="title-booking-tickets">
+                                    <div class="louvre-logo">
+                                        <img src="./assets/png/logo-ticket.png" alt="logo-ticket">
+                                    </div>
+                                    <div class="booking-tickets"><p>booking tickets</p></div>
+                                    <div class="louvre-tour"><p>Tour to Louvre</p></div>
+                                    <div class="red-line"></div>
+                                </div>
+                                <div class="contact-order-date">
+                                    <ul class="data-time-info">
+                                        <li>
+                                            <label for="Date"></label>
+                                            <select class="date"></select>
+                                        </li>
+                                        <li>
+                                            <label for="Time"></label>
+                                            <select class="time"></select>
+                                        </li>
+                                    </ul>
+                                    <ul class="data-person-info">
+                                        <li>
+                                            <label for="Name"></label>
+                                            <input type="text">
+                                        </li>
+                                        <li>
+                                            <label for="E-mail"></label>
+                                            <input type="text">
+                                        </li>
+                                        <li>
+                                            <label for="Phone"></label>
+                                            <input type="text">
+                                        </li>
+                                        <li>
+                                            <label for="Ticket Type"></label>
+                                            <select></select>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="entry-ticket">
+                                    <div>
+                                        <p>Entry Ticket</p>
+                                    </div>
+                                    <div class="change-tickets">
+                                        <div class="basic-ticket">
+                                            <div>
+                                                <p>Basic 18+ (20€)</p>
+                                            </div>
+                                            <div>
+                                                <button class="delete-ticket" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="add-ticket" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                            </div>
+                                        </div>
+                                        <div class="senior-ticket">
+                                            <div>
+                                                <p>Senior 65+ (10€)</p>
+                                            </div>
+                                            <div>
+                                                <button class="delete-ticket" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="add-ticket" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tickets-overview">
+                                <div class="overview-tour">
+                                    <div class="date-tour-to-louvre">
+                                        <div><p>Overview</p></div>
+                                        <div><p>Tour to Louvre</p></div>
+                                        <div><p>DATE</p></div>
+                                        <div><p>TIME</p></div>
+                                        <div><p>TICKET TYPE</p></div>
+                                    </div>
+                                    <div class="photo-louvre">
+                                        <img src="./assets/png/louvre-ticket.png" alt="louvre">
+                                    </div>
+                                </div>
+                                <div class="count-tickets">
+                                    <div class="basic-count">
+                                        <div class="current-count">
+                                            <input type="number" min="0" max="20" value="1" readonly class="number">
+                                            <p>Basic (20 €)</p>
+                                        </div>
+                                        <div><p>"EURO</p></div>
+                                    </div>
+                                    <div class="senior-count">
+                                        <input type="number" min="0" max="20" value="1" readonly class="number">
+                                        <p>Senior (10 €)</p>
+                                    </div>
+                                        <div><p>"EURO</p></div>
+                                    </div>
+                                    <div class="total-count">
+                                        <div><p>Total:</p></div>
+                                        <div><p>"EURO</p></div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="front-card">
+                                        <div>
+                                            <p>Card number</p>
+                                            <input type="number">
+                                        </div>
+                                        <div class="visa-and-mastercard">
+                                            <div class="visa">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="mastercard">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="expiration date">
+                                            <div class="date">
+                                                <label for="Date"></label>
+                                                <select></select>
+                                            </div>
+                                            <div class="year">
+                                                <label for="Year"></label>
+                                                <select></select>
+                                            </div>
+                                        </div>
+                                        <div class="cardholder name">
+                                            <p>Cardholder name</p>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="back-card"></div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
@@ -339,11 +527,14 @@
                                     <h1>contacts</h1>
                                 </div>
                                 <div class="line"></div>
-                                <div class="contacts-info">
-                                    <h3>Palais Royal Musee du Louvre</h3>
-                                    <p>address: 75001 Paris, France</p>
-                                    <p>phone: +33(0) 1 40 20 50 50</p>
-                                    <p>mail: info@louvre.fr</p>
+                                <div class="contacts-places-info">
+                                    <div class="contacts-info">
+                                        <h3>Palais Royal Musee du Louvre</h3>
+                                        <p>address: 75001 Paris, France</p>
+                                        <p>phone: +33(0) 1 40 20 50 50</p>
+                                        <p>mail: info@louvre.fr</p>
+                                    </div>
+                                    <div class="places-info" id="map"></div>
                                 </div>
                             </div>
                         </section>
@@ -368,12 +559,14 @@
                             <li><a href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
-                    <div class="social-neet-contacts">
-                        <img src="assets/png/Youtube.png" alt="youtube">
-                        <img src="assets/png/Instagram.png" alt="instagram">
-                        <img src="assets/png/Facebook.png" alt="fb">
-                        <img src="assets/png/Twitter.png" alt="twiter">
-                        <img src="assets/png/Pinterest.png" alt="pinterest">
+                    <div>
+                        <ul class="social-networks-contacts">
+                            <li><a href="https://www.youtube.com/user/louvre" target="_blank"><img src="assets/png/Youtube.png" alt="youtube"></a></li>
+                            <li><a href="https://www.instagram.com/museelouvre/" target="_blank"><img src="assets/png/Instagram.png" alt="instagram"></a></li>
+                            <li><a href="https://www.facebook.com/museedulouvre" target="_blank"><img src="assets/png/Facebook.png" alt="fb"></a></li>
+                            <li><a href="http://twitter.com/museelouvre" target="_blank"><img src="assets/png/Twitter.png" alt="twiter"></a></li>
+                            <li><a href="https://www.pinterest.fr/museedulouvre/" target="_blank"><img src="assets/png/Pinterest.png" alt="pinterest"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -392,6 +585,9 @@
         </footer>
 
         <script src="slider.js"></script>
+        <script src="galleryMoviesSlider.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+        <script src="map.js"></script>
 
     </body>
 </html>

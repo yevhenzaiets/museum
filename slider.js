@@ -4,7 +4,6 @@ const prev = document.getElementById('prev'),
       bullets = document.querySelectorAll('.bullet'),
       fraction = document.getElementById('number');
 
-
 const activeSlide = s => {
     for(let slide of slides) {
         slide.classList.remove('active');

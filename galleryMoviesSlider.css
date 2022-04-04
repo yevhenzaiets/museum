@@ -1,0 +1,77 @@
+.movies-gallery-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-movies-gallery-container{
+    overflow: hidden;
+    display: flex;
+    padding: 40px 0;
+}
+
+.main-movie-slide-row, .mini-movies-slide-row {
+    display: flex;
+    overflow: hidden;
+}
+
+.mini-movies-slide-row {
+    justify-content: space-between;
+    gap: 0 42px;
+}
+
+.active-slide {
+    max-width: 1440px;
+    height: 735px;
+    align-items: center;
+}
+
+.movies-paginator {
+    display: flex;
+    width: 200px;
+    height: 12px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.prev-movie-arrow, .next-movie-arrow{
+    cursor: pointer;
+    background: url(./assets/png/Vector\ \(Stroke\).png);
+    width: 10px;
+    height: 12px;
+}
+
+.next-movie-arrow {
+    transform: rotate(-180deg);
+}
+
+.prev-movie-arrow:hover{
+    transform: rotate(-180deg);
+    background: url(./assets/png/VectorRED\(Stroke\).png);
+}
+
+.next-movie-arrow:hover{
+    transform: rotate(-360deg);
+    background: url(./assets/png/VectorRED\(Stroke\).png);
+}
+
+.movie-bullets {
+    display: flex;
+    gap: 0 20px;
+}
+
+.movie-bullet {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    background: #999999;
+    background: url(./assets/png/Ellipse.png);
+}
+
+.active-m {
+    background: url(./assets/png/EllipseUnvis.png);
+}
+
+.movie-bullet:hover {
+    background: url(./assets/png/EllipseHover.png);
+}
