@@ -353,17 +353,17 @@
                                         <div class="input-basic-block">
                                             <p>Basic 18+</p>
                                             <div class="block">
-                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()"><span>&#8211</span></button>
                                                 <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()"><span>&#43</span></button>
                                             </div>
                                         </div>
                                         <div class="input-senior-block">
                                             <p>Senior 65+</p>
                                             <div class="block">
-                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
-                                                    <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()"><span>&#8211</span></button>
+                                                <input type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()"><span>&#43</span></button>
                                             </div>
                                         </div>
                                         <div class="total"><p>Total</p></div>
@@ -412,33 +412,37 @@
                                         </li>
                                         <li>
                                             <label for="Ticket Type"></label>
-                                            <select></select>
+                                            <select name="select" class="choose-ticket-type" id="Ticket Type" required>
+                                                <option value="ticket type"><img src="./assets/png/ticket type.png" alt="ticket type">Ticket Type</option>
+                                                <option value="Permanent exhibition">Permanent exhibition</option>
+                                                <option value="Temporary exhibition">Temporary exhibition</option>
+                                                <option value="Combined Admission">Combined Admission</option>
+                                            </select>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="entry-ticket">
-                                    <div>
-                                        <p>Entry Ticket</p>
-                                    </div>
+                                    <div class="entry-ticket-title"><p>Entry Ticket</p></div>
+                                    <div class="entry-ticket-red-line"></div>
                                     <div class="change-tickets">
                                         <div class="basic-ticket">
                                             <div>
                                                 <p>Basic 18+ (20€)</p>
                                             </div>
-                                            <div>
-                                                <button class="delete-ticket" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
-                                                <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="add-ticket" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                            <div class="change-ticket-numb">
+                                                <button class="delete-ticket-popup" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                <input class="number-popup" type="number" min="0" max="20" value="1" readonly>
+                                                <button class="add-ticket-popup" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
                                             </div>
                                         </div>
                                         <div class="senior-ticket">
                                             <div>
                                                 <p>Senior 65+ (10€)</p>
                                             </div>
-                                            <div>
-                                                <button class="delete-ticket" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
-                                                <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="add-ticket" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                            <div class="change-ticket-numb">
+                                                <button class="delete-ticket-popup" type="button" onclick="this.nextElementSibling.stepDown()">&#8211</button>
+                                                <input class="number-popup" type="number" min="0" max="20" value="1" readonly>
+                                                <button class="add-ticket-popup" type="button" onclick="this.previousElementSibling.stepUp()">&#43</button>
                                             </div>
                                         </div>
                                     </div>
@@ -447,8 +451,8 @@
                             <div class="tickets-overview">
                                 <div class="overview-tour">
                                     <div class="date-tour-to-louvre">
-                                        <div><p>Overview</p></div>
-                                        <div><p>Tour to Louvre</p></div>
+                                        <div><p class="overview-tour-title">Overview</p></div>
+                                        <div><p class="overview-tour-title-to-louvre">Tour to Louvre</p></div>
                                         <div><p>DATE</p></div>
                                         <div><p>TIME</p></div>
                                         <div><p>TICKET TYPE</p></div>
@@ -475,45 +479,45 @@
                                         <div><p>Total:</p></div>
                                         <div><p>"EURO</p></div>
                                     </div>
-                                </div>
-                                <div class="card">
-                                    <div class="front-card">
-                                        <div>
-                                            <p>Card number</p>
-                                            <input type="number">
-                                        </div>
-                                        <div class="visa-and-mastercard">
-                                            <div class="visa">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+                                    <div class="card">
+                                        <div class="front-card">
+                                            <div>
+                                                <p>Card number</p>
+                                                <input type="number">
                                             </div>
-                                            <div class="mastercard">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+                                            <div class="visa-and-mastercard">
+                                                <div class="visa">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="mastercard">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                            </div>
+                                            <div class="expiration date">
+                                                <div class="date">
+                                                    <label for="Date"></label>
+                                                    <select></select>
+                                                </div>
+                                                <div class="year">
+                                                    <label for="Year"></label>
+                                                    <select></select>
+                                                </div>
+                                            </div>
+                                            <div class="cardholder name">
+                                                <p>Cardholder name</p>
+                                                <input type="text">
                                             </div>
                                         </div>
-                                        <div class="expiration date">
-                                            <div class="date">
-                                                <label for="Date"></label>
-                                                <select></select>
-                                            </div>
-                                            <div class="year">
-                                                <label for="Year"></label>
-                                                <select></select>
-                                            </div>
-                                        </div>
-                                        <div class="cardholder name">
-                                            <p>Cardholder name</p>
-                                            <input type="text">
-                                        </div>
+                                        <div class="back-card"></div>
                                     </div>
-                                    <div class="back-card"></div>
+                                    <div></div>
                                 </div>
-                                <div></div>
                             </div>
                         </form>
                     </div>

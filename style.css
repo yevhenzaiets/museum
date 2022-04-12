@@ -902,3 +902,185 @@ input[type=number]{
     border: 1px solid #030303;
     box-sizing: border-box;
 }
+
+.data-person-info li {
+    padding-bottom: 20px;
+}
+
+.choose-ticket-type {
+    height: 45px;
+    width: 400px;
+    border-radius: 0px;
+    border: 1px solid #030303
+}
+
+.entry-ticket {
+    height: 135px;
+    width: 400px;
+    border: 1px solid #030303;
+    border-radius: 0px;
+} 
+
+.entry-ticket-title{
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #9D8665;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.entry-ticket-red-line {
+    height: 2px;
+    width: 370px;
+    border-radius: 0px;
+    background: #740C11;
+    opacity: 0.9;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    margin-left: 15px;
+}
+
+.change-tickets {
+    padding: 0 15px;
+}
+
+.basic-ticket, .senior-ticket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+}
+
+.basic-ticket p, .senior-ticket p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+}
+
+.delete-current-ticket, .add-current-ticket {
+    height: 25px;
+    width: 35px;
+    background: #030303;
+}
+
+.delete-ticket, .add-ticket {
+    background: #030303;
+    color: #FFFFFF; 
+} 
+
+/* .number {
+    height: 25px;
+    width: 35px;
+    text-align: end;
+} */
+
+.numb-ticket {
+    display: flex;
+    justify-content: flex-start;
+    height: 25px;
+    width: 35px;
+    background: #FFFFFF;
+    border: 1px solid #030303;
+    box-sizing: border-box
+} 
+
+
+/* overview popup */
+
+.tickets-overview {
+    width: 530px;
+    height: 663px;
+    background: #FFFFFF;
+    border: 1px solid #030303;
+    box-sizing: border-box;
+    margin-left: 40px;
+}
+
+.overview-tour {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.overview-tour-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #272727;
+}
+
+.overview-tour-title-to-louvre {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #740C11;
+    opacity: 0.9;
+    padding-bottom: 10px;
+}
+
+.change-ticket-numb {
+    display: flex;
+    width: 105px;
+    height: 25px;
+    text-align: center;
+    display: inline-block; 
+	position: relative; 
+}
+
+.change-ticket-numb input[type="number"] {
+	height: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+	width: 35px;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+    background: #FFFFFF;
+    border: 1px solid #030303;
+    box-sizing: border-box;
+}
+
+.change-ticket-numb input[type="number"]::-webkit-outer-spin-button,
+.change-ticket-numb input[type="number"]::-webkit-inner-spin-button {
+	display: none;
+}
+
+.add-ticket-popup, .delete-ticket-popup {
+	position: absolute;
+	width: 35px;
+    height: 25px;
+	padding: 0;
+	text-align: center;
+	border: none;
+	font-size: 23px;
+    background: #030303;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-ticket-popup {
+	display: block;
+	font-size: 21px;
+    cursor: pointer;
+}
