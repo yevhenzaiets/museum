@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>museum</title>
 </head>
     <body>
@@ -388,32 +389,39 @@
                                 </div>
                                 <div class="contact-order-date">
                                     <ul class="data-time-info">
-                                        <li>
+                                        <li class="date-with-icon">
                                             <label for="Date"></label>
-                                            <select class="date"></select>
+                                            <input type="date" class="date" min="2022-05-01" max="2023-05-01" required>
+                                            <i class="fa-solid fa-calendar-day"></i>
                                         </li>
-                                        <li>
+                                        <li class="time-with-icon">
                                             <label for="Time"></label>
-                                            <select class="time"></select>
+                                            <input type="time" class="time">
+                                            <i class="fa-solid fa-clock"></i>
                                         </li>
                                     </ul>
                                     <ul class="data-person-info">
-                                        <li>
+                                        <li class="name-with-icon">
                                             <label for="Name"></label>
-                                            <input type="text">
+                                            <input class="user-name placeholder" type="text" placeholder="Name">
+                                            <i class="fa-solid fa-user"></i>
                                         </li>
-                                        <li>
+                                        <li class="mail-with-icon">
                                             <label for="E-mail"></label>
-                                            <input type="text">
+                                            <input class="e-mail placeholder" type="text" placeholder="E-mail">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            
                                         </li>
-                                        <li>
+                                        <li class="phone-with-icon">
                                             <label for="Phone"></label>
-                                            <input type="text">
+                                            <input class="phone placeholder" type="text" placeholder="Phone">
+                                            <i class="fa-solid fa-mobile-screen-button"></i>
                                         </li>
-                                        <li>
+                                        <li class="ticket-with-icon">
                                             <label for="Ticket Type"></label>
+                                            <i class="fa-solid fa-ticket"></i>
                                             <select name="select" class="choose-ticket-type" id="Ticket Type" required>
-                                                <option value="ticket type"><img src="./assets/png/ticket type.png" alt="ticket type">Ticket Type</option>
+                                                <option class="ticket-type-icon" value="ticket type">Ticket Type</option>
                                                 <option value="Permanent exhibition">Permanent exhibition</option>
                                                 <option value="Temporary exhibition">Temporary exhibition</option>
                                                 <option value="Combined Admission">Combined Admission</option>
@@ -453,9 +461,24 @@
                                     <div class="date-tour-to-louvre">
                                         <div><p class="overview-tour-title">Overview</p></div>
                                         <div><p class="overview-tour-title-to-louvre">Tour to Louvre</p></div>
-                                        <div><p>DATE</p></div>
-                                        <div><p>TIME</p></div>
-                                        <div><p>TICKET TYPE</p></div>
+                                        <div class="overview-tour-date">
+                                            <div class="date-logo">
+                                                <i class="fa-solid fa-calendar-day"></i>
+                                            </div>
+                                            <div class="selected-date"><p>DATE</p></div>
+                                        </div>
+                                        <div class="overview-tour-time">
+                                            <div class="time-logo">
+                                                <i class="fa-solid fa-clock"></i>
+                                            </div>
+                                            <div class="selected-time"><p>TIME</p></div>
+                                        </div>
+                                        <div class="overview-tour-ticket">
+                                            <div class="ticket-logo">
+                                                <img src="./assets/png/add-ticket.png" alt="add-ticket">
+                                            </div>
+                                            <div class="ticket-time"><p>TICKET</p></div>
+                                        </div>
                                     </div>
                                     <div class="photo-louvre">
                                         <img src="./assets/png/louvre-ticket.png" alt="louvre">
@@ -464,58 +487,82 @@
                                 <div class="count-tickets">
                                     <div class="basic-count">
                                         <div class="current-count">
-                                            <input type="number" min="0" max="20" value="1" readonly class="number">
+                                            <input type="number" min="0" max="20" value="1">
                                             <p>Basic (20 €)</p>
                                         </div>
-                                        <div><p>"EURO</p></div>
+                                        <div class="euro"><p>EURO</p></div>
                                     </div>
                                     <div class="senior-count">
-                                        <input type="number" min="0" max="20" value="1" readonly class="number">
-                                        <p>Senior (10 €)</p>
+                                        <div class="current-count">
+                                            <input type="number" min="0" max="20" value="1">
+                                            <p>Senior (10 €)</p>
+                                        </div>
+                                        <div class="euro"><p>EURO</p></div>
                                     </div>
-                                        <div><p>"EURO</p></div>
-                                    </div>
-                                    <div class="total-count">
-                                        <div><p>Total:</p></div>
-                                        <div><p>"EURO</p></div>
-                                    </div>
+                                </div>
+                                <div class="red-line-popup"></div>
+                                <div class="total-count">
+                                    <div><p>Total:</p></div>
+                                    <div><p>EURO</p></div>
+                                </div>
                                     <div class="card">
                                         <div class="front-card">
-                                            <div>
+                                            <div class="visa-and-mastercard">
+                                                <div class="visa">
+                                                    <img class="yellow-v" src="./assets/png/v1.png" alt="v1" >
+                                                    <img src="./assets/png/v2.png" alt="v2">
+                                                    <img src="./assets/png/i.png" alt="i">
+                                                    <img src="./assets/png/s.png" alt="s">
+                                                    <img src="./assets/png/a.png" alt="a">
+                                                </div>
+                                                <div class="mastercard">
+                                                    <img src="./assets/png/Mastercard.png" alt="mastercard">
+                                                </div>
+                                            </div>
+                                            <div class="enter-card-number">
                                                 <p>Card number</p>
                                                 <input type="number">
                                             </div>
-                                            <div class="visa-and-mastercard">
-                                                <div class="visa">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
+                                            <div class="expiration-date-info">
+                                                <div class="expiration-date">
+                                                    <p>Expiration date</p>
                                                 </div>
-                                                <div class="mastercard">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                            </div>
-                                            <div class="expiration date">
-                                                <div class="date">
-                                                    <label for="Date"></label>
-                                                    <select></select>
-                                                </div>
-                                                <div class="year">
-                                                    <label for="Year"></label>
-                                                    <select></select>
+                                                <div class="experation-date-inputs">
+                                                    <div class="month">
+                                                        <label for="month"></label>
+                                                        <input type="number">
+                                                    </div>
+                                                    <div class="year">
+                                                        <label for="year"></label>
+                                                        <input type="number">
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="cardholder name">
+                                            <div class="cardholder-name">
                                                 <p>Cardholder name</p>
                                                 <input type="text">
                                             </div>
                                         </div>
-                                        <div class="back-card"></div>
+                                        <div class="back-card">
+                                            <div>
+                                                <input class="black" type="text" disabled>
+                                            </div>
+                                            <div class="cvv-data">
+                                                <p class="cvv">CVC/CVV</p>
+                                                <input class="enter-cvv" type="number">
+                                                <div class="find-cvv">
+                                                    <p>The last</p>
+                                                    <p>3 or 4 digits</p>
+                                                    <p>on back</p>
+                                                    <p>of the card</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="confirm-order">
+                                            <button>Book</button>
+                                        </div>
                                     </div>
+                                </div>
                                     <div></div>
                                 </div>
                             </div>

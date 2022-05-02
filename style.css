@@ -878,7 +878,7 @@ input[type=number]{
 
 .data-time-info {
     display: flex;
-    padding-top: 60px;
+    padding-top: 51px;
     padding-bottom: 20px;
     justify-content: space-between;
 }
@@ -975,12 +975,6 @@ input[type=number]{
     color: #FFFFFF; 
 } 
 
-/* .number {
-    height: 25px;
-    width: 35px;
-    text-align: end;
-} */
-
 .numb-ticket {
     display: flex;
     justify-content: flex-start;
@@ -1006,9 +1000,7 @@ input[type=number]{
 .overview-tour {
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 25px 30px;
 }
 
 .overview-tour-title {
@@ -1081,6 +1073,325 @@ input[type=number]{
 
 .delete-ticket-popup {
 	display: block;
-	font-size: 21px;
+	font-size: 20px;
+    cursor: pointer;
+}
+
+.user-name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #030303;
+}
+
+/* bookings ticket */
+
+.basic-count, .senior-count {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.name-with-icon, .mail-with-icon, .phone-with-icon, 
+.ticket-with-icon, .date-with-icon, .time-with-icon {
+    position: relative;
+}
+
+.name-with-icon i, .mail-with-icon i, .phone-with-icon i, 
+.ticket-with-icon i, .date-with-icon i, .time-with-icon i {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    padding: 1px 15px;
+    color: #000;
+}
+
+.name-with-icon input[type=text],.mail-with-icon input[type=text],
+.phone-with-icon input[type=text], .choose-ticket-type, 
+input[type=date], input[type=time] {
+    padding-left: 40px;
+}
+
+.placeholder::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #030303;
+}
+
+.choose-ticket-type, .phone, .user-name, .e-mail, input[type=date], input[type=time] {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    align-items: center;
+    color: #030303;
+}
+
+input[type=date]::-webkit-inner-spin-button ,
+input[type=time]::-webkit-inner-spin-button {
+    display: none; 
+} 
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.choose-ticket-type, input[type=date], input[type=time] {
+    background-image: url(./assets/png/arrow-select.png);
+    background-repeat: no-repeat; 
+    background-position: calc(100% - 14px) center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} 
+
+/* tickets-overview */
+
+.overview-tour-date, .overview-tour-time, .overview-tour-ticket {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.date-logo i, .time-logo i, .ticket-logo img {
+    padding-right: 15px;
+}
+
+.count-tickets {
+    padding: 0 30px 10px 30px;
+}
+
+.current-count {
+    display: flex;
+}
+
+.current-count input {
+    width: 32px;
+    height: 20px ;
+    background: #030303;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #A4A4A3;
+    text-align: center;
+    margin: 3px auto;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.current-count p, .euro p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #030303;
+}
+
+.current-count p {
+    padding-left: 10px;
+}
+
+.red-line-popup {
+    margin: 0 auto ;
+    height: 2px;
+    width: 470px;
+    background: #740C11;
+}
+
+.total-count {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.total-count p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: #030303;
+}
+
+/* bookings card */
+
+.front-card {
+    position: relative;
+    height: 211px;
+    width: 360px;
+    border-radius: 0px;
+    background: #BCBCBC;
+    margin-left: 30px;
+    margin-right: 140px;
+    z-index: 100;
+}
+
+.enter-card-number {
+    padding: 15px 0 10px 20px;
+}
+
+.expiration-date-info {
+    padding: 0 125px 10px 20px;
+}
+
+.cardholder-name {
+    padding: 0 20px 15px 20px;
+}
+
+.enter-card-number p, .expiration-date p, .cardholder-name p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #161615;
+    padding-bottom: 5px;
+}
+
+.enter-card-number input, .experation-date-inputs input, .cardholder-name input {
+    background: #FFFFFF;
+    border: 0.5px solid #A4A4A3;
+    border-radius: 0;
+}
+
+.enter-card-number input {
+    height: 35px;
+    width: 215px;
+}
+
+.experation-date-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experation-date-inputs input {
+    width: 100px;
+    height: 35px;
+}
+
+.cardholder-name input {
+    height: 35px;
+    width: 320px;
+}
+
+.visa-and-mastercard {
+    position: relative;
+}
+
+.visa {
+    position: absolute;
+    right: 20px;
+    top: 35px;
+}
+
+.yellow-v {
+    position: absolute;
+    top: 2px;
+    left: -3px;
+}
+.visa img {
+    margin: -2px;
+}
+
+.mastercard {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+}
+
+.back-card {
+    position: relative;
+    width: 360px;
+    height: 211px;
+    background: #939393;
+    z-index: 1;
+    bottom: 180px;
+    left: 140px;
+}
+
+.black {
+    margin: 25px 0 15px 0;
+    width: 360px;
+    height: 45px;
+    background: #161615;
+}
+
+.cvv-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cvv{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #161615;
+    text-transform: uppercase;
+    align-self: flex-end;
+    padding: 0 30px 5px 0;
+}
+
+.enter-cvv {
+    width: 75px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 0.5px solid #A4A4A3;
+    align-self: flex-end;
+    margin-right: 17px;
+}
+
+.find-cvv {
+    padding: 6px 30px 0 0;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #161615;
+    margin-left: auto;
+}
+
+.confirm-order {
+    bottom: 150px;
+    right: 30px;
+    position: relative;
+    width: 220px;
+    height: 45px;
+    margin-left: auto;
+    background: #710707;
+    opacity: 0.9;
+}
+
+.confirm-order button {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #710707;
+    margin: 10px 85px;
     cursor: pointer;
 }
