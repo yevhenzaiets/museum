@@ -1,46 +1,96 @@
-.wrapper-slider {
-  margin: 60px 0;
-  /* transition: all 0.3 ease 0s; */
+.slider {
+  position: relative;
 }
-  
+
 .slide {
+  display: none; 
+}
+
+.slider-image {
   display: none;
-  margin: 0 auto;
-  text-align: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 .slide.active {
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  transition: all 0.3 ease 0s;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0%) calc(100% - 95%);
+  min-height: 810px;
 }
 
-.gradient {
-  width: 1000px;
-  height: 750px;
+.slider-title {
+  text-align: left;
+  padding-top: 150px;
+}
+
+.slider-title p {
+  padding-top: 25px;
+  padding-bottom: 75px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+}
+
+.slider-title h1 {
+  font-family: Forum;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.discover-louvre {
+  width: 360px;
+  height: 75px;
+  background: #710707;
+  border-radius: 10px;
+}
+
+.welcome h1:hover {
+  color: #9D8665;
+  cursor: default;
+}
+
+.discover-louvre:hover {
+  background: #9D8665;
+}
+
+.discover-louvre a {
+  width: 360px;
+  height: 75px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  justify-content: center;
 }
 
 .first-slide {
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/monaliza.jpg);
+  background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 50.19%, rgba(0, 0, 0, 0) 60.73%), url(./assets/img/monaliza.jpg);
 }
 
 .second-slide {
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome2.jpg);
+  background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 50.19%, rgba(0, 0, 0, 0) 60.73%), url(./assets/img/welcome2.jpg);
 }
 
 .third-slide {
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome3.jpg);
+  background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 50.19%, rgba(0, 0, 0, 0) 60.73%), url(./assets/img/welcome3.jpg);
 }
 
 .fourth-slide {
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome4.jpg);
+  background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 50.19%, rgba(0, 0, 0, 0) 60.73%), url(./assets/img/welcome4.jpg);
 }
 
 .fifth-slide {
-  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(./assets/img/welcome5.jpg);
+  background: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0.5) 50.19%, rgba(0, 0, 0, 0) 60.73%), url(./assets/img/welcome5.jpg);
 }
 
 .paginator {
@@ -49,7 +99,7 @@
   right: 0;
   display: flex;
   justify-content: space-around;
-  width: 600px;
+  width: 700px;
   height: 120px;
   background: #030303;
   margin: 0 auto;
@@ -65,8 +115,6 @@
 }
 
 .current-fraction span, .final-fraction span{
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 300;
   font-size: 22px;
   line-height: 44px;
@@ -78,15 +126,12 @@
 .from-fraction span {
   width: 6px;
   height: 40px;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 44px;
   align-items: center;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-family: Roboto;
 }
 
 .bullets {
@@ -142,4 +187,150 @@
 .prev-arrow:hover {
   background: url(./assets/png/btn-hov.png);
 } 
+
+@media (max-width: 1024px) {
+  .slide.active {
+    min-height: 585px;
+    background-size: contain;
+  }
+
+  .slider-title {
+    padding-top: 50px;
+  }
+
+  .slider-title h1 {
+    font-size: 50px;
+    line-height: 90px;
+  }
+
+  .slider-title p {
+    padding-bottom: 50px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .paginator {
+    width: 700px;
+  }
+
+  .discover-louvre, .discover-louvre a {
+    width: 300px;
+    height: 60px;
+  }
+
+  .discover-louvre a {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide.active {
+    min-height: 760px;
+  }
+
+  .first-slide, .second-slide, .third-slide,
+  .fourth-slide, .fifth-slide {
+    background: none;
+  }
+
+  .slider-image {
+    display: block;
+  }
+
+  .slider-image img {
+    width: 728px;
+    height: 546px;
+  }
+
+  .paginator {
+    width: 100%;
+    position: static;
+    height: 100px;
+    justify-content: space-evenly;
+  }
+
+  .slider-title {
+    padding: 0;
+    text-align: center;
+  }
+
+  .slider-title h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .slider-title p {
+    padding-bottom: 50px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .discover-louvre {
+    display: none;
+  }
+
+  .bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .current-fraction span, .final-fraction span,
+  .from-fraction span {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .slide.active {
+    min-height: 465px;
+  }
+
+  .welcome__container__black {
+    padding-top: 5px;
+  }
+
+  .slider-title h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .slider-title p {
+    padding-bottom: 50px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .slider-image img {
+    width: 380px;
+    height: 285px;
+  }
+
+  .paginator {
+    height: 80px;
+  }
+
+  .bullets {
+    column-gap: 10px;
+  }
+
+  .fraction{
+    column-gap: 5px;
+  }
+
+  .bullet {
+    width: 7px;
+    height: 7px;
+  }
+
+  .current-fraction span, .final-fraction span,
+  .from-fraction span {
+    font-size: 16px;
+  }
+
+  .prev-arrow, .next-arrow {
+    width: 20px;
+  }
+}
 

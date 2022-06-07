@@ -1,62 +1,175 @@
-*{
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,500italic,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Forum:regular&display=swap);
+
+*, *::after, *::before{
     padding: 0;
     margin: 0;
-    border: 0;
+    border: none;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
 }
 
-.content {
+html, body {
+    height: 100%;
+    min-width: 420px;
+}
+
+body {
+    font-family: Roboto;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    overflow: hidden;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+[class*="__container"] {
     max-width: 1920px;
     margin: 0 auto;
+    padding: 0px 240px;
 }
 
-.header {
-    height: 150px;
+[class*="__black"]{
     background: #030303;
 }
 
-.container {
-    max-width: 1440px;
-    margin: 0 auto;
+[class*="__white"]{
+    background: #FFFFFF;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    max-width: 1440px;
-    height: 150px;
+.section  {
+    padding: 75px 0; 
 }
 
-.louvre {
+.section-title {
+    position: relative;
     font-family: Forum;
-    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.dark {
+    color: #000000;
+}
+
+.section-title:hover {
+    cursor: default;
+    color: #9D8665;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #710707;
+}
+
+#withoutLine::after {
+    display: none;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+@media (max-width: 1024px) {
+    [class*="__container"] {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0px 20px;
+    }
+
+    .section  {
+        padding: 60px 0; 
+    }
+
+    .section-title {
+        font-size: 50px;
+        line-height: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    [class*="__container"] {
+        max-width: 768px;
+    }
+
+    .section  {
+        padding: 40px 0; 
+    }
+
+    .section-title {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .section-title::after {
+        bottom: -20px;
+    }
+    
+}
+
+@media (max-width: 420px) {
+    [class*="__container"] {
+        max-width: 420px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+/* header style */
+
+.header__container {
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+    gap: 466px;
+    background: #030303;
+}
+
+.louvre-logo {
+    font-family: Forum;
     font-weight: 400;
     font-size: 28px;
     line-height: 31px;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: #FFFFFF;
     padding: 0 0 0 25px;
 }
 
-.navigation {
-    width: 775px;
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 49px;
     height: 26px;
 }
 
-.nav-description {
+.menu-list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 55px;
 }
 
-.nav-description li a {
-    list-style: none;
-    text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
+.menu-link {
     font-weight: 200;
     font-size: 22px;
     line-height: 26px;
@@ -64,152 +177,73 @@
     color: #FFFFFF;
 }
 
-.nav-description li a:hover {
+.menu-link:hover {
     color: #9D8665;
 }
 
-.nav-description li a:active{
+.menu-link:active{
     color: #7E6C51;
 }
 
-.wrapper {
-    width: 1920px;
-    /* height: 842px; */
-    background: #030303;
-} 
+.burger-menu-wrapper {
+    display: none;
+    width: 32px;
+    height: 18px;
+}
 
-.welcome {
-    max-width: 1440px;
-    height: 810px;
+.burger-menu {
     display: flex;
-    position: relative;
-    /* background-image: url("assets/img/monaliza.jpg"); 
-    background-position: calc(100% - 0%) calc(100% - 95%); */
-    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+    flex-direction: column;
+    gap: 6px;
 }
 
-/* @media (max-width: 1024px) {
-    .container {
-        max-width: 1024px;
-        margin: 0 auto;
+.burger-menu span {
+    width: 32px;
+    height: 2px;
+    background: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+    .header-menu {
+        display: none;
     }
-    .gradient {
-        width: 700px;
-        height: 525px;
+
+    .burger-menu-wrapper {
+        display: block;
     }
-} */
 
-/* section welcome */
-
-.welcome-description {
-    max-width: 1440px;
-    height: 810px;
-    flex: 0 1 auto;
-    z-index: 2;
+    .header__container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 131px;
+    } 
 }
 
-.welcome-description h1 {
-    padding-top: 150px;
-    font-family: Forum;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+@media (max-width: 768px) {
+    .header__container {
+        min-height: 112px;
+        gap: 497px;
+    } 
 }
 
-.welcome-description h1:hover {
-    color: #9D8665;
-    cursor: default;
+@media (max-width: 420px) {
+    .header__container {
+        min-height: 90px;
+        gap: 212px;
+    } 
+    
+    .louvre-logo {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .logo img {
+        width: 29px;
+        height: 16px;
+    }
 }
 
-.welcome-description p {
-    padding-top: 25px;
-    padding-bottom: 75px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 28px;
-    line-height: 33px;
-    letter-spacing: 2px;
-    color: #FFFFFF;
-}
-
-.discover-btn {
-    width: 360px;
-    height: 75px;
-    background: #710707;
-    border-radius: 10px;
-}
-
-.discover-btn:hover {
-    background: #9D8665;
-}
-
-.discover-btn a {
-    height: 75px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 26px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 2px;
-    color: #FFFFFF;
-    justify-content: center;
-    text-decoration: none;
-}
-
-/* slider style */
-
-.slider {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    background: #030303;
-    overflow: hidden;
-}
-
-/* section vitual tour */
-
-.virtual-tour {
-    padding: 75px 0; 
-    width: 1920px;
-    /* height: 1116px; */
-    background:#FFFFFF;
-}
-
-.visiting-section {
-    width: 1440px;
-}
-
-.visiting-section h1 {
-    padding-bottom: 25px;
-    font-family: Forum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.visiting-section h1:hover {
-    color: #9D8665;
-    cursor: default;
-}
-
-.line {
-    width: 1440px;
-    height: 3px;
-    background: #710707;
-    border-radius: 0px;
-}
+/* main louvre style  section virtual tour */
 
 .virtual-tour-places {
     display: grid;
@@ -218,13 +252,8 @@
     margin-top: 75px;
 }
 
-.virtual-tour-places a {
-    text-decoration: none;
-}
-
 .title-place {
     font-family: Forum;
-    font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 35px;
@@ -255,9 +284,7 @@
 } 
 
 .panorama-info {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 22px;
     line-height: 26px;
     color: #000000;
@@ -265,9 +292,7 @@
 }
 
 .panorama-view {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-size: 18px;
     line-height: 21px;
     color: #000000;
@@ -275,45 +300,15 @@
 }
 
 @media (max-width: 1024px) {
-    .content {
-        max-width: 1024px;
-        margin: 0 auto;
-    }
-
-    .visiting-section {
-        width: 1024px;
-    }
-
-    .virtual-tour {
-        width: 1024px;
-        padding: 60px 0;
-        height: 100%;
-    }
-
     .virtual-tour-places {
-       gap: 60px 108px;
-       margin: 60px 128px;
-       display: grid;
        grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .visiting-section h1 {
-        font-weight: 400;
-        font-size: 50px;
-        line-height: 75px;
-        letter-spacing: 5px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
-    .line {
-        width: 984px;
-        margin: 0 auto;
+       margin: 85px 108px 0 108px;
+       gap: 60px 108px;
     }
 
     .place-info img {
         width: 330px;
-        height: 215px
+        height: 215px;
     }
 
     .title-place {
@@ -334,41 +329,16 @@
         font-size: 16px;
         line-height: 19px;
     }
+
+    .line-place:after {
+        width: 150px;
+    }
 }
 
 @media (max-width: 768px) {
-    .content {
-        max-width: 768px;
-        margin: 0 auto;
-    }
-
-    .visiting-section {
-        width: 768px;
-    }
-
-    .virtual-tour {
-        height: 100%;
-    }
-
     .virtual-tour-places {
-       gap: 56px 40px;
-       margin: 40px 76px;
-       display: grid;
-       grid-template-columns: repeat(2, 1fr); 
-    }
-
-    .visiting-section h1 {
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 60px;
-        letter-spacing: 5px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
-    .line {
-        width: 728px;
-        margin: 0 auto;
+        margin: 65px 56px 0 56px;
+        gap: 40px 56px;
     }
 
     .place-info img {
@@ -377,59 +347,21 @@
     }
 
     .title-place {
-        font-weight: 400;
         font-size: 22px;
         line-height: 24px;
-        letter-spacing: 3px;
     }
 
     .panorama-info {
-        font-weight: 100;
         font-size: 18px;
         line-height: 21px;
-    }
-
-    .panorama-view {
-        font-weight: 100;
-        font-size: 16px;
-        line-height: 19px;
     }
 }
 
 @media (max-width: 420px) {
-    .content {
-        max-width: 420px;
-        margin: 0 auto;
-    }
-
-    .visiting-section {
-        width: 420px;
-    }
-
-    .virtual-tour {
-        padding: 40px 0;
-    }
-
     .virtual-tour-places {
        gap: 40px 0;
-       margin: 40px 70px;
-       display: grid;
+       margin: 65px 50px 0 50px;
        grid-template-columns: repeat(1, 1fr); 
-    }
-
-    .visiting-section h1 {
-        font-weight: 400;
-        font-size: 28px;
-        line-height: 40px;
-        letter-spacing: 5px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-        color: #9D8665;
-    }
-
-    .line {
-        width: 380px;
-        margin: 0 auto;
     }
 
     .place-info img {
@@ -438,14 +370,12 @@
     }
 
     .title-place {
-        font-weight: 400;
         font-size: 18px;
         line-height: 20px;
         letter-spacing: 5px;
     }
 
     .panorama-info, .panorama-view {
-        font-weight: 100;
         font-size: 16px;
         line-height: 19px;
     }
@@ -453,13 +383,13 @@
 
 /* section picture explore */
 
-.picture-explore, .video-jorney-info {
-    padding: 75px 0;   
-}
-
-.explore-section {
+.explore {
     display: flex;
     gap: 0 60px;
+}
+
+.picture-explore-text {
+    padding-top: 100px;
 }
 
 .description-picture, .some-picture {
@@ -471,33 +401,7 @@
     height: 700px;
 }
 
-.description-picture h1 {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding-bottom: 25px;
-}
-
-.description-picture h1:hover {
-   cursor: default;
-   color: #9D8665;
-}
-
-.line-picture-explore {
-    width: 660px;
-    height: 3px;
-    background: #710707;
-    margin-bottom: 75px;
-}
-
 .description-picture p {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 38px;
@@ -510,45 +414,22 @@
 }
 
 @media (max-width: 1024px) {
-    .wrapper {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    .picture-explore {
-        padding: 60px 0;   
-    }
-
-    .line-picture-explore {
-        width: 984px;
-        margin: 0 20px;
-    }
-
-    .explore-section {
-        display: flex;
+    .explore {
         flex-direction: column;
     }
 
-    .description-picture h1 {
-        font-size: 50px;
-        line-height: 75px;
-        letter-spacing: 5px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
     .picture-explore-text {
-        padding: 60px 20px;
+        padding: 85px 0 65px 0;
     }
 
     .picture-explore-text p{
         margin: 0;
         font-size: 20px;
-        line-height: 38px;
+        line-height: 35px;
     }
 
-    .some-picture img {
-        margin: 0 152px;
+    .some-picture {
+        align-self: center;
     }
 
     .last-phrase {
@@ -557,20 +438,8 @@
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-        width: 768px;
-        margin: 0 auto;
-    }
-
-    .line-picture-explore {
-        width: 728px;
-        margin: 0 20px 40px 20px;
-    }
-
-    .description-picture h1 {
-        font-size: 40px;
-        line-height: 60px;
-        letter-spacing: 5px;
+    .some-picture {
+        margin-top: 60px;
     }
 
     .picture-explore-text {
@@ -579,75 +448,31 @@
 
     .some-picture img {
         width: 728px;
-        height: 725px;
-        margin: 0 20px;
+        height: 705px;
     }
 }
 
 @media (max-width: 420px) {
-    .wrapper {
-        width: 420px;
-        margin: 0 auto;
-    }
-
-    .picture-explore {
-        padding: 40px 0;
-    }
-
-    .line-picture-explore {
-        width: 380px;
-        margin: 0 20px 40px 20px;
-    }
-
-    .description-picture h1 {
-        font-size: 28px;
-        line-height: 40px;
-        letter-spacing: 5px;
-    }
-
-    .picture-explore-text {
-        display: none;
-    }
 
     .some-picture img {
         width: 380px;
         height: 368px;
-        margin: 0 20px;
     }
 }
 
 /* section video journey */
 
-.title-video-journey {
-    max-width: 1440px;
+.video-jorney-content {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 75px;
 }
 
-.video-journey-h1, .video-journey-p {
+.video-journey-title, .video-journey-p {
     flex: 1 0 50%;
 }
 
-.title-video-journey h1 {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.title-video-journey h1:hover {
-    cursor: default;
-    color: #9D8665;
-}
-
-.title-video-journey p {
-    font-family: Roboto;
-    font-style: normal;
+.video-jorney-content p {
     font-weight: 300;
     font-size: 22px;
     line-height: 38px;
@@ -663,10 +488,6 @@
 }
 
 @media (max-width: 1024px) {
-    .video-jorney-info {
-        padding: 60px 0;
-    }
-
     .movies-gallery{
         padding: 0 20px;
     }
@@ -681,13 +502,13 @@
         height: 170px;
     }
 
-    .title-video-journey h1 {
+    .video-jorney-content h1 {
         color: #9D8665;
         font-size: 50px;
         line-height: 75px;
     }
 
-    .title-video-journey {
+    .video-jorney-content {
         padding-left: 20px;
         padding-bottom: 20px;
     }
@@ -716,12 +537,12 @@
         height: 199px;
     }
 
-    .title-video-journey h1 {
+    .video-jorney-content h1 {
         font-size: 40px;
         line-height: 60px;
     }
 
-    .title-video-journey {
+    .video-jorney-content {
         padding-left: 20px;
         padding-bottom: 20px;
     }
@@ -746,12 +567,12 @@
         height: 101px;
     }
 
-    .title-video-journey h1 {
+    .video-jorney-content h1 {
         font-size: 28px;
         line-height: 40px;
     }
 
-    .title-video-journey {
+    .video-jorney-content {
         padding-left: 20px;
         padding-bottom: 20px;
     }
@@ -759,38 +580,15 @@
     .mini-movies-slide-row {
         gap: 0 20px;
     }
-
 }
 
 /* section art gallery */
 
-.art-gallery {
-    padding-top: 75px;
-    width: 1920px;
-    height: 2200px;
-    background: #030303;
-}
-
-.picture-container h1 {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.picture-container h1:hover {
-    cursor: default;
-    color: #9D8665;
+.gallery {
+    height: 2105px;
 }
 
 .picture-container {
-    margin: 0 auto;
-    /* padding-top: 75px; */
-    width: 1440px;
     overflow-y: hidden;
     height: 2030px;
 }
@@ -817,8 +615,7 @@
 }
 
 @media (max-width: 1024px) {
-    .art-gallery {
-        width: 1024px;
+    .gallery {
         height: 1460px;
         padding-top: 60px;
     }
@@ -846,8 +643,7 @@
 }
 
 @media (max-width: 768px) {
-    .art-gallery {
-        width: 768px;
+    .gallery {
         height: 1220px;
         padding-top: 40px;
     }
@@ -874,8 +670,7 @@
 }
 
 @media (max-width: 420px) {
-    .art-gallery{
-        width: 420px;
+    .gallery{
         height: 757px;
     }
 
@@ -907,33 +702,8 @@
 
 /* section by tickets */
 
-.tickets {
-    margin: 75px 0;
-}
-
-.buy-tickets {
-    width: 1440px;
-    /* height: 743px; */
-}
-
-.buy-tickets-h1 {
+.buy-tickets-tittle {
     padding-bottom: 25px;
-}
-
-.buy-tickets-h1 h1 {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.buy-tickets-h1 h1:hover {
-    cursor: default;
-    color: #9D8665;
 }
 
 .amount {
@@ -956,8 +726,6 @@
 }
 
 .ticket-type h2 {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 400;
     font-size: 28px;
     line-height: 33px;
@@ -1014,8 +782,6 @@
     cursor: pointer;
     font-size: 22px;
     user-select: none;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1024,9 +790,7 @@
 }
 
 .amount-title h2 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 28px;
     line-height: 33px;
     color: #000000;
@@ -1036,8 +800,6 @@
 .number {
     width: 12px;
     height: 26px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1049,8 +811,6 @@
 }
  
 input[type=number]{
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1074,8 +834,6 @@ input[type=number]{
     background: white;
     width: 18px;
     height: 38px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
@@ -1084,23 +842,9 @@ input[type=number]{
     cursor: pointer;
 }
 
-.button {
-    width: 18px;
-    height: 38px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 32px;
-    line-height: 37px;
-    text-align: center;
-    color: #000000;
-}
-
 .input-basic-block p, .input-senior-block p {
     padding-top: 25px;
     padding-bottom: 15px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1113,9 +857,7 @@ input[type=number]{
 }
 
 .total p {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 28px;
     line-height: 33px;
     letter-spacing: 1.65px;
@@ -1127,8 +869,6 @@ input[type=number]{
     height: 50px;
     background: #000000;
     border-radius: 2px;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1155,11 +895,11 @@ input[type=number]{
         margin: 60px 0;
     }
 
-    .buy-tickets-h1 {
+    .buy-tickets-tittle {
         padding-bottom: 20px;
     }
 
-    .buy-tickets-h1 h1 {
+    .buy-tickets-tittle h1 {
         font-size: 50px;
         line-height: 75px;
     }
@@ -1173,11 +913,7 @@ input[type=number]{
         height: 440px;
     }
 
-    .line {
-        position: absolute;
-        width: 984px;
-    
-    }
+
 
     .order-form {
         margin-top: 60px;
@@ -1214,11 +950,11 @@ input[type=number]{
         margin: 40px 0;
     }
 
-    .buy-tickets-h1 {
+    .buy-tickets-tittle {
         padding-bottom: 20px;
     }
 
-    .buy-tickets-h1 h1 {
+    .buy-tickets-tittle h1 {
         font-size: 40px;
         line-height: 60px;
     }
@@ -1276,11 +1012,11 @@ input[type=number]{
         margin: 40px 0;
     }
 
-    .buy-tickets-h1 {
+    .buy-tickets-tittle {
         padding-bottom: 20px;
     }
 
-    .buy-tickets-h1 h1 {
+    .buy-tickets-tittle h1 {
         font-size: 28px;
         line-height: 40px;
     }
@@ -1340,7 +1076,7 @@ input[type=number]{
 
 /* parallax */
 
-.parallax {
+.parallax__container {
     width: 100%;
     height: 400px;
     background-size: cover;
@@ -1349,29 +1085,23 @@ input[type=number]{
 }
 
 @media (max-width: 1024px) {
-    .parallax {
+    .parallax__container {
         height: 390px;
-        background-size: contain;
         background-image: url(./assets/png/parallax1024px.png);
-        background-attachment: local;
+        background-attachment: local; 
     }
 }   
 
 @media (max-width: 768px) {
-    .parallax {
+    .parallax__container {
         height: 300px;
-        background-size: contain;
         background-image: url(./assets/png/parallax768.png);
-        background-attachment: local;
     }
 }   
 
 @media (max-width: 420px) {
-    .parallax {
-        height: 300px;
-        background-size: contain;
+    .parallax__container {
         background-image: url(./assets/png/parallax420.png);
-        background-attachment: local;
     }
 }   
 
@@ -1388,33 +1118,11 @@ input[type=number]{
     height: 620px;
 }
 
-.our-contact {
-    margin: 75px 0;
-}
-
 .contacts-title {
     padding-bottom: 25px;
 }
 
-.contacts-title h1 {
-    font-family: Forum;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 80px;
-    line-height: 90px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.contacts-title h1:hover {
-    cursor: default;
-    color: #9D8665;
-}
-
 .contacts-info h3 {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 28px;
     line-height: 33px;
@@ -1426,8 +1134,6 @@ input[type=number]{
 }
 
 .contacts-info p {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 300;
     font-size: 22px;
     line-height: 26px;
@@ -1545,10 +1251,13 @@ input[type=number]{
 
 /* footer */
 
+.footer__container__black {
+    min-height: 395px;
+}
+
 .footer {
     background: #030303;
     border-radius: 0px;
-    height: 400px;
 }
 
 .container-wrap {
@@ -1575,10 +1284,7 @@ input[type=number]{
 }
 
 .nav-description-footer li a {
-    list-style: none;
     text-decoration: none;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 200;
     font-size: 22px;
     line-height: 26px;
@@ -1604,13 +1310,11 @@ input[type=number]{
 .footer-line {
     margin-bottom: 50px;
     height: 3px;
-    width: 1920px;
+    width: 100%;
     background: #666666;
 }
 
 .author-name {
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 200;
     font-size: 22px;
     line-height: 22px;
@@ -1753,23 +1457,17 @@ input[type=number]{
     }
 }  
 
-
-
-
 /* popup styles */
 
 .popup {
     position: fixed;
-    right: 0;
     top: 0;
     left: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
-    /* background: #FFFFFF; */
-    margin: 0 auto;
     visibility: hidden;
     opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .popup.open {
@@ -1779,15 +1477,22 @@ input[type=number]{
 
 .popup-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.popup-body {
+    display: flex;
     position: relative;
-    width: 970px;
-    height: 663px;
-    padding: 91px 235px;
+    background-color: #FFFFFF;
+    max-width: 1440px;
+    height: 100%;
+    padding: 90px 235px;
 }
 
 .booking-tickets {
-    font-family: 'Forum';
-    font-style: normal;
+    font-family: Forum;
     font-weight: 400;
     font-size: 50px;
     line-height: 55px;
@@ -1797,8 +1502,6 @@ input[type=number]{
 }
 
 .louvre-tour {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -1859,8 +1562,7 @@ input[type=number]{
 } 
 
 .entry-ticket-title{
-    font-family: 'Forum';
-    font-style: normal;
+    font-family: Forum;
     font-weight: 400;
     font-size: 18px;
     line-height: 20px;
@@ -1893,8 +1595,6 @@ input[type=number]{
 }
 
 .basic-ticket p, .senior-ticket p {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -1941,8 +1641,6 @@ input[type=number]{
 }
 
 .overview-tour-title {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 32px;
     line-height: 38px;
@@ -1950,8 +1648,6 @@ input[type=number]{
 }
 
 .overview-tour-title-to-louvre {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
@@ -1971,8 +1667,6 @@ input[type=number]{
 
 .change-ticket-numb input[type="number"] {
 	height: 25px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -2015,8 +1709,6 @@ input[type=number]{
 }
 
 .user-name {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -2054,8 +1746,6 @@ input[type=date], input[type=time] {
 }
 
 .placeholder::placeholder {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -2065,8 +1755,6 @@ input[type=date], input[type=time] {
 }
 
 .choose-ticket-type, .phone, .user-name, .e-mail, input[type=date], input[type=time] {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -2118,8 +1806,6 @@ input[type=time]::-webkit-calendar-picker-indicator {
     height: 20px ;
     background: #030303;
     border-radius: 5px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -2135,8 +1821,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .current-count p, .euro p {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
@@ -2161,8 +1845,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .total-count p {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 38px;
@@ -2279,8 +1961,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .cvv {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
@@ -2301,8 +1981,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 .find-cvv {
     padding: 6px 30px 0 0;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
@@ -2322,8 +2000,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .confirm-order button {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
@@ -2343,4 +2019,72 @@ input[type='number']::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {  
+    .popup-body {
+        padding: 75px 27px 30px 27px;
+    }
+    
+    .close-popup {
+        right: 27px;
+    }
+}  
 
+@media (max-width: 768px) {  
+    .popup-body {
+        flex-direction: column;
+        padding: 80px 30px 40px 30px;
+    }
+
+    .tickets-overview {
+        margin: 50px 0 0 0;
+    }
+
+    .data-time-info {
+        padding: 40px 0 20px 0;
+    }
+
+    .date, .time {
+        width: 250px;
+        height: 45px;
+    }
+
+    .entry-ticket-red-line {
+        width: 500px;
+    }
+
+    .data-person-info input, .data-person-info select,
+    .red-line, .entry-ticket {
+        width: 530px;
+    }
+}
+
+@media (max-width: 420px) {  
+    .popup {
+        width: auto;
+    }
+
+    .booking-tickets {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .tickets-overview {
+        margin: 50px 0 0 0;
+    }
+
+    .data-time-info {
+        flex-direction: column;
+        padding: 40px 0 20px 0;
+        gap: 20px 0;
+    }
+
+    .entry-ticket-red-line {
+        width: 330px;
+    }
+
+    .data-person-info input, .data-person-info select,
+    .red-line, .entry-ticket,
+    .date, .time {
+        width: 360px;
+    }
+} 
