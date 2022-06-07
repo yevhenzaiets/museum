@@ -1,1 +1,1 @@
-https://yevhenzaiets.github.io/museum/museum
+https://yevhenzaiets.github.io/museum/
