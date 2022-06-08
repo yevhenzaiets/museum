@@ -487,101 +487,6 @@ a {
     background: black;
 }
 
-@media (max-width: 1024px) {
-    .movies-gallery{
-        padding: 0 20px;
-    }
-
-    .main-movie-slide-row iframe {
-        width: 984px;
-        height: 504px;
-    }
-
-    .movie-slide iframe {
-        width: 300px;
-        height: 170px;
-    }
-
-    .video-jorney-content h1 {
-        color: #9D8665;
-        font-size: 50px;
-        line-height: 75px;
-    }
-
-    .video-jorney-content {
-        padding-left: 20px;
-        padding-bottom: 20px;
-    }
-
-    .video-journey-p {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .video-jorney-info {
-        padding: 40px 0;
-    }
-
-    .movies-gallery{
-        padding: 0 20px;
-    }
-
-    .main-movie-slide-row iframe {
-        width: 728px;
-        height: 386px;
-    }
-
-    .movie-slide iframe {
-        width: 354px;
-        height: 199px;
-    }
-
-    .video-jorney-content h1 {
-        font-size: 40px;
-        line-height: 60px;
-    }
-
-    .video-jorney-content {
-        padding-left: 20px;
-        padding-bottom: 20px;
-    }
-}
-
-@media (max-width: 420px) {
-    .video-jorney-info {
-        padding: 40px 0;
-    }
-
-    .movies-gallery{
-        padding: 0 20px;
-    }
-
-    .main-movie-slide-row iframe {
-        width: 380px;
-        height: 226px;
-    }
-
-    .movie-slide iframe {
-        width: 180px;
-        height: 101px;
-    }
-
-    .video-jorney-content h1 {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
-    .video-jorney-content {
-        padding-left: 20px;
-        padding-bottom: 20px;
-    }
-
-    .mini-movies-slide-row {
-        gap: 0 20px;
-    }
-}
-
 /* section art gallery */
 
 .gallery {
@@ -620,14 +525,8 @@ a {
         padding-top: 60px;
     }
 
-    .picture-container h1 {
-        font-size: 50px;
-        line-height: 70px;
-    }
-
     .picture-container {
-        height: 1460px;
-        width: 984px;
+        height: 1400px;
         overflow-y: hidden;
     }
 
@@ -648,20 +547,14 @@ a {
         padding-top: 40px;
     }
 
-    .picture-container h1 {
-        font-size: 40px;
-        line-height: 60px;
-    }
-
     .picture-container {
-        margin: 0 20px;
-        height: 1220px;
-        width: 768px;
+        height: 1180px;
     }
 
     .picture-inner-container {
-        height: 2000px;
+        height: 3200px;
         gap: 24px 24px;
+        padding-top: 40px;
     }
 
     .grid-item img {
@@ -671,23 +564,14 @@ a {
 
 @media (max-width: 420px) {
     .gallery{
-        height: 757px;
-    }
-
-    .picture-container h1 {
-        font-size: 28px;
-        line-height: 40px;
+        height: 756px;
     }
 
     .picture-container {
-        height: 755px;
-        width: 420px;
-        overflow-y: hidden;
+        height: 716px;
     }
 
     .picture-inner-container {
-        padding-top: 40px;
-        max-width: 178px;
         height: 2000px;
     }
 
@@ -701,10 +585,6 @@ a {
 }
 
 /* section by tickets */
-
-.buy-tickets-tittle {
-    padding-bottom: 25px;
-}
 
 .amount {
     display: flex;
@@ -885,25 +765,6 @@ input[type=number]{
 }
 
 @media (max-width: 1024px) {
-    .buy-tickets {
-        width: 1024px;
-        margin: 0 20px;
-    }
-    
-    .tickets {
-        width: 1024px;
-        margin: 60px 0;
-    }
-
-    .buy-tickets-tittle {
-        padding-bottom: 20px;
-    }
-
-    .buy-tickets-tittle h1 {
-        font-size: 50px;
-        line-height: 75px;
-    }
-
     .ticket-type {
         display: none;
     }
@@ -913,10 +774,8 @@ input[type=number]{
         height: 440px;
     }
 
-
-
     .order-form {
-        margin-top: 60px;
+        margin-top: 80px;
         gap: 0 80px;
     }
 
@@ -939,48 +798,15 @@ input[type=number]{
     }
 }
 
-@media (max-width: 768px) {
-    .buy-tickets {
-        width: 768px;
-        margin: 0 20px;
-    }
-    
-    .tickets {
-        width: 768px;
-        margin: 40px 0;
-    }
-
-    .buy-tickets-tittle {
-        padding-bottom: 20px;
-    }
-
-    .buy-tickets-tittle h1 {
-        font-size: 40px;
-        line-height: 60px;
-    }
-
-    .ticket-type {
-        display: none;
-    }
-
+@media (max-width: 768px) {    
     .order-form-picture img {
         width: 444px;
         height: 340px;
     }
 
-    .line {
-        position: absolute;
-        width: 728px;
-    }
-
     .order-form {
-        margin-top: 40px;
+        margin-top: 60px;
         gap: 0 60px;
-    }
-
-    .input-basic-block p {
-        padding-top: 29px;
-        padding-bottom: 10px;
     }
 
     .input-senior-block p {
@@ -992,35 +818,9 @@ input[type=number]{
         padding: 40px 0;
     }
 
-    .amount {
-        align-items: flex-start;
-    }
-
-    .block {
-        width: 175px;
-    }
 }
 
 @media (max-width: 420px) {
-    .buy-tickets {
-        width: 420px;
-        margin: 0 20px;
-    }
-    
-    .tickets {
-        width: 420px;
-        margin: 40px 0;
-    }
-
-    .buy-tickets-tittle {
-        padding-bottom: 20px;
-    }
-
-    .buy-tickets-tittle h1 {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
     .order-form-picture img {
         width: 380px;
         height: 160px;
@@ -1048,10 +848,6 @@ input[type=number]{
         padding-bottom: 15px;
         font-size: 16px;
         line-height: 19px;
-    }
-
-    .total {
-        padding: 40px 0;
     }
 
     .amount {
@@ -1110,16 +906,12 @@ input[type=number]{
 .contacts-places-info {
     display: flex;
     justify-content: space-between;
-    padding-top: 75px;
+    padding-top: 100px;
 }
 
 .places-info {
     width: 960px;
     height: 620px;
-}
-
-.contacts-title {
-    padding-bottom: 25px;
 }
 
 .contacts-info h3 {
@@ -1142,21 +934,8 @@ input[type=number]{
 }
 
 @media (max-width: 1024px) {
-    .our-contact {
-        margin: 60px 20px;
-    }
-
     .contacts-places-info {
-        padding-top: 60px;
-    }
-
-    .contacts-title {
-        padding-bottom: 20px;
-    }
-
-    .contacts-title h1 {
-        font-size: 50px;
-        line-height: 75px;
+        padding-top: 80px;
     }
     
     .contacts-info h3 {
@@ -1181,22 +960,9 @@ input[type=number]{
 }   
 
 @media (max-width: 768px) {
-    .our-contact {
-        margin: 40px 20px;
-    }
-
     .contacts-places-info {
         flex-direction: column;
-        padding-top: 40px;
-    }
-
-    .contacts-title {
-        padding-bottom: 20px;
-    }
-
-    .contacts-title h1 {
-        font-size: 40px;
-        line-height: 60px;
+        padding-top: 60px;
     }
     
     .contacts-info h3 {
@@ -1219,16 +985,7 @@ input[type=number]{
     }
 }   
 
-@media (max-width: 420px) {
-    .contacts-title {
-        padding-bottom: 20px;
-    }
-
-    .contacts-title h1 {
-        font-size: 28px;
-        line-height: 40px;
-    }
-    
+@media (max-width: 420px) {    
     .contacts-info h3 {
         font-size: 19px;
         line-height: 19px;
@@ -1239,13 +996,13 @@ input[type=number]{
         line-height: 19px;
     }
 
-    .description-contacts-info {
-        padding: 40px 0;
-    }
-
     .places-info {
         width: 380px;
         height: 248px;
+    }
+
+    .description-contacts-info {
+        padding: 40px 0 25px 0px;
     }
 }  
 
@@ -1344,7 +1101,7 @@ input[type=number]{
     }
 
     .container-wrap {
-        padding: 65px 0 50px 20px;
+        padding: 65px 0 50px 0;
     }
 
     .footer-logo {
@@ -1356,14 +1113,6 @@ input[type=number]{
         gap: 25px 100px;
     }
     
-    .author-data {
-        margin: 0 20px;
-    }
-    
-    .footer-line {
-        width: 1024px;
-    }
-
     .social-networks-contacts {
         margin-left: 90px;
     }
@@ -1375,7 +1124,8 @@ input[type=number]{
     }
 
     .container-wrap {
-        padding: 40px 0 40px 20px;
+        gap: 0 100px;
+        padding: 40px 0 40px 0px;
     }
 
     .nav-description-footer {
@@ -1386,7 +1136,7 @@ input[type=number]{
     
     .footer-line {
         height: 1px;
-        width: 768px;
+        width: 100%;
         margin-bottom: 40px;
     }
 
@@ -1415,7 +1165,7 @@ input[type=number]{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px 20px 40px 20px;
+        padding: 40px 0px;
     }
 
     .nav-description-footer {
@@ -1427,7 +1177,7 @@ input[type=number]{
     
     .footer-line {
         height: 2px;
-        width: 420px;
+        width: 100%;
         margin-bottom: 30px;
     }
     

@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.mini-movies-gallery-container{
+.mini-movies-gallery-container {
     overflow: hidden;
     display: flex;
     padding: 40px 0;
@@ -73,4 +73,68 @@
 
 .movie-bullet:hover {
     background: url(./assets/png/EllipseHover.png);
+}
+
+@media (max-width: 1024px) {
+    .main-movie-slide-row iframe {
+        width: 984px;
+        height: 504px;
+    }
+
+    .movie-slide iframe {
+        width: 300px;
+        height: 170px;
+    }
+
+    .video-jorney-content {
+        padding-bottom: 40px;
+    }
+
+    .video-journey-p {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-movie-slide-row iframe {
+        width: 728px;
+        height: 386px;
+    }
+
+    .movie-slide iframe {
+        width: 354px;
+        height: 199px;
+    }
+
+    .mini-movies-gallery-container {
+        padding: 20px 0;
+    }
+
+    .video-jorney-content, .movies-gallery-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .mini-movies-slide-row {
+        gap: 0 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-movie-slide-row iframe {
+        width: 380px;
+        height: 226px;
+    }
+
+    .movie-slide iframe {
+        width: 180px;
+        height: 101px;
+    }
+
+    .movies-gallery-wrapper {
+        padding-bottom: 0;
+    }
+
+    .mini-movies-gallery-container {
+        padding: 40px 0;
+    }
 }
