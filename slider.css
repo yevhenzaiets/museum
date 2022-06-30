@@ -12,9 +12,6 @@
 
 .slide.active {
   display: block;
-  /* width: 100%;
-  height: 100%; */
-  transition: all 0.3 ease 0s;
   background-repeat: no-repeat;
   background-position: calc(100% - 0%) calc(100% - 95%);
   min-height: 810px;
@@ -26,6 +23,7 @@
 }
 
 .slider-title p {
+  cursor: default;
   padding-top: 25px;
   padding-bottom: 75px;
   font-weight: 300;

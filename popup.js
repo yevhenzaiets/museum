@@ -7,10 +7,11 @@ let unlock = true;
 const timeout= 800;
 
 // function popupOpen (currentPopup) {
-//     if()
+//     unlock ? #map style z-index:0 : false
 // }
 
 showPopup.addEventListener("click", function () {
     let currentPopup = document.getElementById('popup');
     currentPopup.classList.add("open")
 })
+

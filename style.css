@@ -64,7 +64,7 @@ a {
     color: #000000;
 }
 
-.section-title:hover {
+.section-title:hover, .slider-title h1:hover {
     cursor: default;
     color: #9D8665;
 }
@@ -388,6 +388,19 @@ a {
     gap: 0 60px;
 }
 
+.picture-block {
+    position: relative;
+    width: auto;
+    height: 700px;
+}
+
+.las-meninas {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
 .picture-explore-text {
     padding-top: 100px;
 }
@@ -396,9 +409,20 @@ a {
     flex: 0 1 50%;
 }
 
-.some-picture img {
-    width: 720px;
+.las-meninas img {
+    display: block;
+    vertical-align: middle;
+}
+
+.img-comp-slider {
+    position: absolute;
+    z-index: 9;
+    cursor: ew-resize;
+    /*set the appearance of the slider:*/
+    width: 39px;
     height: 700px;
+    background-image: url(./assets/png/explore-slider.png);
+    opacity: 0.7;
 }
 
 .description-picture p {
@@ -428,8 +452,8 @@ a {
         line-height: 35px;
     }
 
-    .some-picture {
-        align-self: center;
+    .picture-block {
+        margin: 0 132px;
     }
 
     .last-phrase {
@@ -438,24 +462,37 @@ a {
 }
 
 @media (max-width: 768px) {
-    .some-picture {
-        margin-top: 60px;
+    .picture-block {
+        margin: 60px 0 0 0;
     }
 
     .picture-explore-text {
         display: none;
     }
 
-    .some-picture img {
-        width: 728px;
+    .las-meninas img {
+        width: 728px; 
+        height: 705px;
+    }
+
+    .img-comp-slider, .picture-block{
         height: 705px;
     }
 }
 
 @media (max-width: 420px) {
+    .picture-block {
+        height: 368px;
+    }
 
-    .some-picture img {
+    .las-meninas img {
         width: 380px;
+        height: 368px;
+    }
+
+    .img-comp-slider{
+        background-image: url(./assets/png/explore-slider420.png);
+        width: 20px;
         height: 368px;
     }
 }
@@ -494,8 +531,12 @@ a {
 }
 
 .picture-container {
-    overflow-y: hidden;
+    overflow: hidden;
     height: 2030px;
+}
+
+.gallery-img {
+    max-width: 456px;
 }
 
 .picture-inner-container {
@@ -507,9 +548,9 @@ a {
     padding-top: 75px;
 }
 
-.grid-item img {
+/* .grid-item img {
     max-width: 456px;
-}
+} */
 
 .grid-item:first-child {
     padding-top: 50px;

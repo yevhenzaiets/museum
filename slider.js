@@ -55,3 +55,29 @@ bullets.forEach((item, bulletIndex) => {
 
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
+
+//// mouse swipe left, right
+// let currentSlide = document.querySelector(".active");
+// let x1 = null;
+// let y1 = null;
+
+// currentSlide.addEventListener('mousedown', handleTouchStart, false);
+// currentSlide.addEventListener('mouseup', handleTouchMove, false);
+
+// function handleTouchStart(e) {
+//     x1 = e.clientX;
+//     y1 = e.clientY;
+// };
+
+// function handleTouchMove(e) {
+//     if(!x1 || !y1){
+//         return false
+//     };
+//     let x2 = e.clientX;
+//     let y2 = e.clientY;
+//     let diffX = x2 - x1;
+//     let diffY = y2 - y1;
+//     diffX > 0 ? nextSlide() : prevSlide();
+//     x1 = null;
+//     y2 = null;
+// }
