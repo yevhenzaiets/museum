@@ -1,3 +1,22 @@
+.video-jorney-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
+}
+
+.video-journey-title, .video-journey-p {
+    flex: 1 0 50%;
+}
+
+.video-jorney-content p {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
 .movies-gallery-wrapper{
     display: flex;
     flex-direction: column;
@@ -73,6 +92,119 @@
 
 .movie-bullet:hover {
     background: url(./assets/png/EllipseHover.png);
+}
+
+/* section video journey */
+
+.video-player {
+    width: 1440px;
+    height: 650px;
+}
+
+.video-player-controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+    background: #000000;
+    border-radius: 0px;
+    justify-content: space-around;
+}
+
+.play-btn {
+    background: #000000;
+    padding-left: 20px;
+}
+
+.player-mode {
+    background: #000000; 
+}
+
+.video-progress {
+    width: 930px;
+}
+
+.volume-progress {
+    width: 225px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 8px;
+    cursor: pointer;
+    background: #C4C4C4;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/* input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+} */
+
+/* кнопка перемотування */
+
+
+/* прогресбар зліва і справа */
+
+input[type=range]::-ms-track {
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+}
+
+
+/* input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+} */
+
+input[type=range]::-ms-fill-lower {
+    background: #710707;
+    /* border-radius: 0px; */
+}
+input[type=range]::-ms-fill-upper {
+    background: #C4C4C4;
+    /* border-radius: 0px; */
+}
+
+input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: #C4C4C4;
+    /* background: transparent; */
+    
+}
+
+input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+  
+input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
 }
 
 @media (max-width: 1024px) {
