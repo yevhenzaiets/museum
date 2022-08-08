@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let offsetAnimationElem = el.offsetTop + (el.offsetHeight / 5); /* element position on a page relatively top */
       if(currentWiewportCenter >= offsetAnimationElem) {
         el.classList.add("show-animation");
+        console.log(offsetAnimationElem);
+        // console.log(currentWiewportCenter)
       } else {
         el.classList.add("no-anim");
         if(!el.classList.contains("no-anim")) {
@@ -40,5 +42,3 @@ document.addEventListener("DOMContentLoaded", () => {
   showGallery();
   window.addEventListener('scroll', showGallery);
 });
-
-
