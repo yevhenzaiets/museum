@@ -384,13 +384,14 @@ a {
 /* section picture explore */
 
 .explore {
-    display: flex;
+    display: grid;
     gap: 0 60px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .picture-block {
     position: relative;
-    width: auto;
+    width: 720px;
     height: 700px;
 }
 
