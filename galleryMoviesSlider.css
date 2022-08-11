@@ -270,3 +270,37 @@ input[type="range"]::-ms-track {
         padding: 40px 0;
     }
 }
+
+/* */
+
+.active-movie {
+    width: 1440px;
+    height: 735px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* #player {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+
+.to-play {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-image: url(./assets/img/poster0.jpg);
+    background-size: cover;
+}
+
+/* .to-play img {
+    width: 1440px;
+    height: 650px;
+} */

@@ -27,15 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentWiewportCenter = (window.innerHeight / 2) + window.scrollY; /* scroll position on a page */
     scrollItems.forEach(el => {
       let offsetAnimationElem = el.offsetTop + (el.offsetHeight / 5); /* element position on a page relatively top */
-      if(currentWiewportCenter >= offsetAnimationElem) {
+      let offsetGallerySection = document.querySelector(".gallery").offsetTop;
+      if(currentWiewportCenter >= offsetAnimationElem && currentWiewportCenter >= offsetGallerySection) {
         el.classList.add("show-animation");
-        console.log(offsetAnimationElem);
-        // console.log(currentWiewportCenter)
       } else {
-        el.classList.add("no-anim");
-        if(!el.classList.contains("no-anim")) {
-          el.classList.remove("show-animation");
-        }
+        el.classList.remove("show-animation");
       }
     });
   }
