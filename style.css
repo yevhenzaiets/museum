@@ -139,7 +139,7 @@ a {
 
 .header__container {
     display: flex;
-    min-height: 150px;
+    min-height: 155px;
     align-items: center;
     gap: 466px;
     background: #030303;

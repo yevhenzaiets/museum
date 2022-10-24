@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="swiper-data/swiper-bundle.min.css">
     <title>museum</title>
 </head>
     <body>
@@ -233,158 +234,59 @@
 
                         <div class="movies-gallery">
                             <div class="movies-gallery-wrapper">
-                                <div class="main-movie-slide-row">
-                                    <div class="slide-container active-movie">
-                                        <div id="player"></div>
-                                        <div class="to-play" data-id="player" data-video="zp1BXPX8jcU">
+                                <div class="main-movie-slide-row">                           
+                                    <div class="main-slide current">
+                                        <div class="to-play player" id="player" data-id="player" data-video="zp1BXPX8jcU">
                                             <img src="./assets/png/video-buttons/To-play.svg" alt="play">
                                         </div>
-                                       <!-- <div class="video-player-controls">
-                                            <button class="play-btn">
-                                                <input type="image" src="/museum/assets/png/video-buttons/play.png">
-                                            </button>
-                                            <input id="range" oninput="rangevalue.value=value" type="range" min="0" max="100" value="0" class="video-progress">
-                                            <div class="progress-video"></div>
-                                            <div class="volume">
-                                                <input type="image" src="/museum/assets/png/video-buttons/volume.png">
-                                            </div>
-                                            <input type="range" min="0" max="100" value="50" class="volume-progress">
-                                            <button class="player-mode">
-                                                <input type="image" src="/museum/assets/png/video-buttons/fullscreen.png">
-                                            </button>
-                                       </div> -->
                                     </div>
-
-                                    <!-- <div class="slide-container active-movie">
-                                        <video class="video-player"  autoplay>
-                                             <source src="https://www.youtube.com/embed/zp1BXPX8jcU.mp4"></source>
-                                        </video>
-                                        <div class="video-player-controls">
-                                             <button class="play-btn">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/play.png">
-                                             </button>
-                                             <input id="range" oninput="rangevalue.value=value" type="range" min="0" max="100" value="0" class="video-progress">
-                                             <div class="progress-video"></div>
-                                             <div class="volume">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/volume.png">
-                                             </div>
-                                             <input type="range" min="0" max="100" value="50" class="volume-progress">
-                                             <button class="player-mode">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/fullscreen.png">
-                                             </button>
+                                    <div class="main-slide">
+                                        <div class="to-play player1" id="player1" data-id="player1" data-video="Vi5D6FKhRmo">
+                                            <img src="./assets/png/video-buttons/To-play.svg" alt="play">
                                         </div>
-                                     </div>
-
-                                     <div class="slide-container active-movie">
-                                        <video class="video-player"  autoplay>
-                                             <source src="https://www.youtube.com/embed/zp1BXPX8jcU.mp4"></source>
-                                        </video>
-                                        <div class="video-player-controls">
-                                             <button class="play-btn">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/play.png">
-                                             </button>
-                                             <input id="range" oninput="rangevalue.value=value" type="range" min="0" max="100" value="0" class="video-progress">
-                                             <div class="progress-video"></div>
-                                             <div class="volume">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/volume.png">
-                                             </div>
-                                             <input type="range" min="0" max="100" value="50" class="volume-progress">
-                                             <button class="player-mode">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/fullscreen.png">
-                                             </button>
-                                        </div>
-                                     </div>
-
-                                     <div class="slide-container active-movie">
-                                        <video class="video-player"  autoplay>
-                                             <source src="https://www.youtube.com/embed/zp1BXPX8jcU.mp4"></source>
-                                        </video>
-                                        <div class="video-player-controls">
-                                             <button class="play-btn">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/play.png">
-                                             </button>
-                                             <input id="range" oninput="rangevalue.value=value" type="range" min="0" max="100" value="0" class="video-progress">
-                                             <div class="progress-video"></div>
-                                             <div class="volume">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/volume.png">
-                                             </div>
-                                             <input type="range" min="0" max="100" value="50" class="volume-progress">
-                                             <button class="player-mode">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/fullscreen.png">
-                                             </button>
-                                        </div>
-                                     </div>
-
-                                     <div class="slide-container active-movie">
-                                        <video class="video-player"  autoplay>
-                                             <source src="https://www.youtube.com/embed/zp1BXPX8jcU.mp4"></source>
-                                        </video>
-                                        <div class="video-player-controls">
-                                             <button class="play-btn">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/play.png">
-                                             </button>
-                                             <input id="range" oninput="rangevalue.value=value" type="range" min="0" max="100" value="0" class="video-progress">
-                                             <div class="progress-video"></div>
-                                             <div class="volume">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/volume.png">
-                                             </div>
-                                             <input type="range" min="0" max="100" value="50" class="volume-progress">
-                                             <button class="player-mode">
-                                                 <input type="image" src="/museum/assets/png/video-buttons/fullscreen.png">
-                                             </button>
-                                        </div>
-                                     </div> -->
-
-                                    
-
-
-                                    <!-- <div class="slide-container active-movie">
-                                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/zp1BXPX8jcU" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div> -->
-                                    <!-- <div class="slide-container">
-                                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     </div>
-                                    <div class="slide-container">
-                                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/NOhDysLnTvY" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="main-slide">
+                                        <div class="to-play player2" id="player2" data-id="player2" data-video="NOhDysLnTvY">
+                                            <img src="./assets/png/video-buttons/To-play.svg" alt="play">
+                                        </div>
                                     </div>
-                                    <div class="swiper-slide-container">
-                                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/aWmJ5DgyWPI" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="main-slide">
+                                        <div class="to-play player3" id="player3" data-id="player3" data-video="aWmJ5DgyWPI">
+                                            <img src="./assets/png/video-buttons/To-play.svg" alt="play">
+                                        </div>
                                     </div>
-                                    <div class="slide-container">
-                                        <iframe width="1440" height="735" src="https://www.youtube.com/embed/2OR0OCr6uRE" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </div> -->
+                                    <div class="main-slide">
+                                        <div class="to-play player4" id="player4" data-id="player4" data-video="2OR0OCr6uRE">
+                                            <img src="./assets/png/video-buttons/To-play.svg" alt="play">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="mini-movies-gallery-container">
-                                    <div class="mini-movies-slide-row">
-                                        <div class="movie-slide">
-                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <div class="mini-movies-slide-row swiper-wrapper" id="mini-slider">
+                                        <div class="movie-slide swiper-slide">
+                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                        <div class="movie-slide">
-                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="movie-slide swiper-slide">
+                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                        <div class="movie-slide">
-                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="movie-slide swiper-slide">
+                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                        <div class="movie-slide">
-                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="movie-slide swiper-slide">
+                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                         </div>
-                                        <div class="movie-slide">
-                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="movie-slide swiper-slide">
+                                            <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" loading="lazy" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                                         </div>  
                                     </div>
-                                </div>
 
-                                <div class="movies-paginator">
-                                    <div class="prev-movie-arrow"></div>
-                                    <div class="movie-bullets">
-                                        <div class="movie-bullet"></div>
-                                        <div class="movie-bullet"></div>
-                                        <div class="movie-bullet"></div>
-                                        <div class="movie-bullet"></div>
-                                        <div class="movie-bullet"></div>
-                                    </div>
-                                    <div class="next-movie-arrow"></div>
+                                    <div class="movies-paginator">
+                                        <div class="prev-movie-arrow"></div>
+                                        <div class="movie-bullets"></div>
+                                        <div class="next-movie-arrow"></div>
+                                    </div> 
+
                                 </div>
 
                             </div>
@@ -749,6 +651,10 @@
         <script src="popup.js"></script>
         <script src="picture.js"></script>
         <script src="video.js"></script>
+        <script src="swiper-data/swiper-bundle.min.js"></script>
+        <script src="swiper.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 
     </body>
+
 </html>

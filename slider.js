@@ -81,3 +81,52 @@ prev.addEventListener("click", prevSlide);
 //     x1 = null;
 //     y2 = null;
 // }
+// const slidesColl = document.getElementById("main-slider");
+// console.log(slidesColl)
+// slidesColl.onmousedown = dragStart;
+// slidesColl.addEventListener('touchstart', dragStart);
+// slidesColl.addEventListener('touchmove', dragAction);
+// slidesColl.addEventListener('touchend', dragEnd);
+
+// let posInitial;
+
+// function dragStart(e) {
+//     e = e || window.event;
+//     e.preventDefault();
+//     posInitial = slides.offsetLeft;
+    
+//     if (e.type == 'touchstart') {
+//       posX1 = e.touches[0].clientX;
+//     } else {
+//       posX1 = e.clientX;
+//       document.onmouseup = dragEnd;
+//       document.onmousemove = dragAction;
+//     }
+// }
+
+// function dragAction(e) {
+//     e = e || window.event;
+    
+//     if (e.type == 'touchmove') {
+//       posX2 = posX1 - e.touches[0].clientX;
+//       posX1 = e.touches[0].clientX;
+//     } else {
+//       posX2 = posX1 - e.clientX;
+//       posX1 = e.clientX;
+//     }
+//     slidesColl.style.left = (slidesColl.offsetLeft - posX2) + "px";
+// }
+  
+// function dragEnd (e) {
+//     posFinal = slidesColl.offsetLeft;
+//     if (posFinal - posInitial < -threshold) {
+//       shiftSlide(1, 'drag');
+//     } else if (posFinal - posInitial > threshold) {
+//       shiftSlide(-1, 'drag');
+//     } else {
+//         slidesColl.style.left = (posInitial) + "px";
+//     }
+
+//     document.onmouseup = null;
+//     document.onmousemove = null;
+// }

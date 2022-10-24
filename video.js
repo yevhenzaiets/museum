@@ -1,71 +1,89 @@
-// const rangeInputs = document.querySelectorAll('input[type="range"]')
-// const numberInput = document.querySelector('input[type="number"]')
-
-// function handleInputChange(e) {
-//   let target = e.target
-//   if (e.target.type !== 'range') {
-//     target = document.getElementById('range')
-//   } 
-//   const min = target.min
-//   const max = target.max
-//   const val = target.value
-  
-//   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
-// }
-
-// rangeInputs.forEach(input => {
-//   input.addEventListener('input', handleInputChange)
-// })
-
-// numberInput.addEventListener('input', handleInputChange)
-
-// const video = document.querySelector(".player-video");
-// const videoSrc = video.getAttribute("src") + `?rel=0&modestbranding=1&controls=2&egm=0&showinfo=0&iv_load_policy=3`;
-// console.log(videoSrc)
-
-// let setVideoSrc = `${videoSrc}+?+${modestbranding=1}`;
-// videoSrc = setVideoSrc; 
-
-// console.log(videoSrc)
-
-// video.setAttribute("src", videoSrc);
-
+/* youtubePlayer API */
 let tag = document.createElement('script');
-
 tag.src = "https://www.youtube.com/iframe_api";
 let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
+let toPlay = document.querySelectorAll(".to-play");
 let player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    videoId: 'zp1BXPX8jcU',
-    events: {
-    //   'onReady': onPlayerReady,
-    //   'onStateChange': onPlayerStateChange
+
+toPlay.forEach(function(elem) {
+    elem.addEventListener("click", function() {
+        let playerID = this.dataset.id;
+        let videoId = this.dataset.video;
+        player = new YT.Player(playerID, {
+            playerVars: {
+                'autoplay': 0,
+                'controls': 2,
+                'playsinline': 1,
+                'rel': 0,
+                'showinfo': 0,
+                'modestbranding': 1,
+                'enablejsapi': 1,
+                'iv_load_policy': 3,
+            },
+            videoId: videoId,
+            events: {
+                'onReady': onPlayerReady,
+            }
+        });
+
+        function onPlayerReady(event) {
+            elem.classList.add("remove-poster");
+            event.target.playVideo();
+        }
+    });
+}) 
+
+function pauseVideo() {
+    if(player) {
+        player.pauseVideo();
     }
-  });
 }
 
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
+/* main slide */
+
+const mainSlider = document.querySelector('.main-movie-slide-row');
+const mainSliderItems = Array.from(mainSlider.children);
+const prevBtn = document.querySelector('.prev-movie-arrow');
+const nextBtn = document.querySelector('.next-movie-arrow');
+
+mainSliderItems.forEach(function(elem, ind) {
+    /// hide all slides except first
+    if (ind !== 0) elem.classList.add('hidden');
+
+    /// add index
+    elem.dataset.index = ind;
+
+    /// add attribute current slide to show it
+    mainSliderItems[0].setAttribute('data-current', '');
+
+}) 
+
+prevBtn.onclick = function() {
+    pauseVideo();
+    shiftingSlide('prev');
 }
 
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
+nextBtn.onclick = function() {
+    pauseVideo();
+    shiftingSlide('next');
 }
 
-function stopVideo() {
-  player.stopVideo();
-}
+function shiftingSlide(direction) {
+    const currentSlide = mainSlider.querySelector('[data-current]');
+    const indexCurrentSlide = +currentSlide.dataset.index;
+    let nextSlideIndex;
 
+    if(direction === 'next') {
+        nextSlideIndex = indexCurrentSlide + 1 === mainSliderItems.length ? 0 : indexCurrentSlide + 1;
+    }else{
+        nextSlideIndex = indexCurrentSlide === 0 ? mainSliderItems.length - 1 : indexCurrentSlide - 1;
+    }
+
+    currentSlide.classList.add('hidden');
+    currentSlide.removeAttribute('data-current');
+    /// set up next slide 
+    const nextSlide = mainSlider.querySelector(`[data-index="${nextSlideIndex}"]`);
+    nextSlide.classList.remove('hidden');
+    nextSlide.setAttribute('data-current', '');
+}
