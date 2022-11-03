@@ -12,6 +12,6 @@ const timeout= 800;
 
 showPopup.addEventListener("click", function () {
     let currentPopup = document.getElementById('popup');
-    currentPopup.classList.add("open")
+    currentPopup.classList.add("open");
 })
 

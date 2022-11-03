@@ -1,4 +1,4 @@
-// swiper ////
+// initialization swiper ////
 const swiper = new Swiper(".mini-movies-gallery-container", {
     slidesPerView: 3,
     spaceBetween: 42,
@@ -9,18 +9,13 @@ const swiper = new Swiper(".mini-movies-gallery-container", {
     nested: true,
     pagination: {
       el: ".movie-bullets",
-      clickable: true,
+      // clickable: true,
     },
     navigation: {
       nextEl: ".next-movie-arrow",
       prevEl: ".prev-movie-arrow",
     },
 });
-
-//// ------------------------------------------------------------ ////
-
-
-
 
 
 

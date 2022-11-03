@@ -288,7 +288,6 @@
                                     </div> 
 
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -315,38 +314,48 @@
                                 <div class="type-order">
                                     <div class="ticket-type">
                                         <h2>Ticket Type</h2>
-                                        <label class="container-type-radio">Permanent exhibition
-                                            <input type="radio" name="radio" >
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container-type-radio">Temporary exhibition
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="container-type-radio">Combined Admission
-                                            <input type="radio" name="radio">
-                                            <span class="checkmark"></span>
-                                        </label>
+                                        
+                                        <fieldset class="tickets-group">
+                                            <div class="tickets-type">
+                                                <input type="radio" class="ticket" name="ticket-type" id="r1" checked>
+                                                <label for="r1" class="label-radio">Permanent exhibition</label>
+                                            </div>
+                                            <div class="tickets-type">
+                                                <input type="radio" class="ticket" name="ticket-type" id="r2">
+                                                <label for="r2" class="label-radio">Temporary exhibition</label>
+                                            </div>
+                                            <div class="tickets-type">
+                                                <input type="radio" class="ticket" name="ticket-type" id="r3">
+                                                <label for="r3" class="label-radio">Combined Admission</label>
+                                            </div>
+                                        </fieldset>
+                                        
                                     </div>
                                     <div class="amount">
                                         <div class="amount-title"><h2>Amount</h2></div>
                                         <div class="input-basic-block">
                                             <p>Basic 18+</p>
                                             <div class="block">
-                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()"><span>&#8211</span></button>
-                                                <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()"><span>&#43</span></button>
+                                                <!-- <button class="change-current takeAway" type="button" onclick="this.nextElementSibling.stepDown()"><span class="ticket">&#8211</span></button>
+                                                <input name="basic" type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="change-current add" type="button" onclick="this.previousElementSibling.stepUp()"><span class="ticket">&#43</span></button> -->
+                                                <button class="ticket__button clicable" type="button"><span class="ticket__button_remove">&#8211</span></button>
+                                                <input name="amount" id="basic" type="number" value="1" readonly class="number">
+                                                <button class="ticket__button clicable" type="button"><span class="ticket__button_add">&#43</span></button>
                                             </div>
                                         </div>
                                         <div class="input-senior-block">
                                             <p>Senior 65+</p>
                                             <div class="block">
-                                                <button class="change-current" type="button" onclick="this.nextElementSibling.stepDown()"><span>&#8211</span></button>
-                                                <input type="number" min="0" max="20" value="1" readonly class="number">
-                                                <button class="change-current" type="button" onclick="this.previousElementSibling.stepUp()"><span>&#43</span></button>
+                                                <button class="ticket__button clicable" type="button"><span class="ticket__button_remove">&#8211</span></button>
+                                                <input name="amount" id="senior" type="number" value="1" readonly class="number">
+                                                <button class="ticket__button clicable" type="button"><span class="ticket__button_add">&#43</span></button>
+                                                <!-- <button class="change-current takeAway" type="button" onclick="this.nextElementSibling.stepDown()"><span class="ticket">&#8211</span></button>
+                                                <input name="senior" type="number" min="0" max="20" value="1" readonly class="number">
+                                                <button class="change-current add" type="button" onclick="this.previousElementSibling.stepUp()"><span class="ticket">&#43</span></button> -->
                                             </div>
                                         </div>
-                                        <div class="total"><p>Total</p></div>
+                                        <div class="total"><p class="text">Total &#8364;</p></div>
                                         <div class="buy"><button class="buy-button">Buy Now</button></div>
                                     </div>
                                 </div>
@@ -653,6 +662,7 @@
         <script src="video.js"></script>
         <script src="swiper-data/swiper-bundle.min.js"></script>
         <script src="swiper.js"></script>
+        <script src="tickets.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 
     </body>

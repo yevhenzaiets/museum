@@ -622,6 +622,11 @@ a {
     align-items: flex-end;
 }
 
+.tickets-type {
+    display: flex;
+    align-items: baseline;
+}
+
 .order-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -635,21 +640,13 @@ a {
     /* gap: 0 240px; */
 }
 
-.ticket-type h2 {
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 33px;
-    color: #000000;
-    margin-bottom: 50px;
-}
-
 .container-type-radio input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.checkmark {
+/* .checkmark {
     position: absolute;
     width: 17px;
     height: 17px;
@@ -658,9 +655,9 @@ a {
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 50%;
-}
+} */
 
-.container-type-radior:hover input ~ .checkmark {
+r:hover input ~ .checkmark {
     background-color: red;
 }
 
@@ -684,10 +681,10 @@ a {
     background: black;
 }
 
-.container-type-radio {
+.label-radio {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 20px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -699,12 +696,22 @@ a {
     margin-bottom: 25px;
 }
 
-.amount-title h2 {
+input[type="radio"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    accent-color: #000000;
+}
+
+.amount-title h2, .ticket-type h2 {
     font-weight: 700;
     font-size: 28px;
     line-height: 33px;
     color: #000000;
-    text-align: end;
+}
+
+.ticket-type h2 {
+    padding-bottom: 50px;
 }
 
 .number {
@@ -740,7 +747,7 @@ input[type=number]{
     justify-content: space-evenly;
 }
 
-.change-current {
+.ticket__button {
     background: white;
     width: 18px;
     height: 38px;
