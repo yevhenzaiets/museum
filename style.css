@@ -440,11 +440,12 @@ a {
 
 @media (max-width: 1024px) {
     .explore {
+        display: flex;
         flex-direction: column;
     }
 
     .picture-explore-text {
-        padding: 85px 0 65px 0;
+        padding: 85px 0 60px 0;
     }
 
     .picture-explore-text p{
@@ -454,7 +455,7 @@ a {
     }
 
     .picture-block {
-        margin: 0 132px;
+        margin: 0 auto;
     }
 
     .last-phrase {
