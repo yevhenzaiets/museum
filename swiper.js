@@ -15,6 +15,20 @@ const swiper = new Swiper(".mini-movies-gallery-container", {
       nextEl: ".next-movie-arrow",
       prevEl: ".prev-movie-arrow",
     },
+    /// add adaptive design for mobile
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 41,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      420: {
+        slidesPerView: 2,
+      }
+    }
 });
 
 

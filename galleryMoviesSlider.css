@@ -1,3 +1,4 @@
+/* section video journey */
 .video-jorney-content {
     display: flex;
     justify-content: space-between;
@@ -26,7 +27,6 @@
     overflow: hidden;
     display: flex;
     padding: 40px 0;
-
     flex-direction: column;
 }
 
@@ -58,11 +58,9 @@
     position: relative;
 }
 
-.swiper-slide {
-    /* position: relative;
+.youtube-video {
     width: 452px;
-    height: 254px; */
-    transition: all .2s ease-out;
+    height: 254px;
 }
 
 .movies-paginator {
@@ -96,12 +94,6 @@
     background: #710707;
 }
 
-.active-slide {
-    max-width: 1440px;
-    height: 735px;
-    align-items: center;
-}
-
 .prev-movie-arrow, .next-movie-arrow{
     cursor: pointer;
     background: url(./assets/png/Vector\ \(Stroke\).png);
@@ -123,199 +115,8 @@
     background: url(./assets/png/VectorRED\(Stroke\).png);
 }
 
-/* section video journey */
-
-.video-player {
-    width: 1440px;
-    height: 650px;
-}
-
-.video-player-controls {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 85px;
-    background: #000000;
-    border-radius: 0px;
-    justify-content: space-around;
-}
-
-.play-btn {
-    background: #000000;
-    padding-left: 20px;
-}
-
-.player-mode {
-    background: #000000; 
-}
-
-.video-progress {
-    width: 930px;
-}
-
-.volume-progress {
-    width: 225px;
-}
-
-input[type=range] {
-    -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    height: 8px;
-    cursor: pointer;
-    background: #C4C4C4;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 15px;
-    width: 15px;
-    background: #FFFFFF;
-    border-radius: 50px;
-    margin-top: -4px;
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-/* input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
-} */
-
-/* кнопка перемотування */
-
-
-/* прогресбар зліва і справа */
-
-input[type=range]::-ms-track {
-    cursor: pointer;
-    background: transparent;
-    color: transparent;
-}
-
-
-/* input[type=range]::-ms-thumb {
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: goldenrod;
-} */
-
-input[type=range]::-ms-fill-lower {
-    background: #710707;
-    /* border-radius: 0px; */
-}
-input[type=range]::-ms-fill-upper {
-    background: #C4C4C4;
-    /* border-radius: 0px; */
-}
-
-input[type=range]::-webkit-slider-runnable-track  {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: #C4C4C4;
-    /* background: transparent; */
-    
-}
-
-input[type=range]::-moz-range-track {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-}
-  
-input[type="range"]::-ms-track {
-    -webkit-appearance: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-}
-
-@media (max-width: 1024px) {
-    .main-movie-slide-row iframe {
-        width: 984px;
-        height: 504px;
-    }
-
-    .movie-slide iframe {
-        width: 300px;
-        height: 170px;
-    }
-
-    .video-jorney-content {
-        padding-bottom: 40px;
-    }
-
-    .video-journey-p {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .main-movie-slide-row iframe {
-        width: 728px;
-        height: 386px;
-    }
-
-    .movie-slide iframe {
-        width: 354px;
-        height: 199px;
-    }
-
-    .mini-movies-gallery-container {
-        padding: 20px 0;
-    }
-
-    .video-jorney-content, .movies-gallery-wrapper {
-        padding-bottom: 20px;
-    }
-
-    .mini-movies-slide-row {
-        gap: 0 20px;
-    }
-}
-
-@media (max-width: 420px) {
-    .main-movie-slide-row iframe {
-        width: 380px;
-        height: 226px;
-    }
-
-    .movie-slide iframe {
-        width: 180px;
-        height: 101px;
-    }
-
-    .movies-gallery-wrapper {
-        padding-bottom: 0;
-    }
-
-    .mini-movies-gallery-container {
-        padding: 40px 0;
-    }
-}
-
-/* */
-
-.slide-container {
-    position: relative;
-    width: 1440px;
-    height: 0;
-    justify-content: center;
-    padding-bottom: 56.25%;
-}
-
+/* poster for main slider */
 .player {
-    /* position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0; */
     background-image: url(./assets/img/poster0.jpg);
 }
 
@@ -334,7 +135,7 @@ input[type="range"]::-ms-track {
 .player4 {
     background-image: url(./assets/img/poster4.jpg);
 }
-
+/* button main slider */
 .to-play {
     position: absolute;
     width: 100%;
@@ -345,10 +146,6 @@ input[type="range"]::-ms-track {
     cursor: pointer;
     background-size: cover;
 }
-
-
-
-
 
 .to-play img:hover {
     opacity: 0.7;
@@ -363,8 +160,76 @@ input[type="range"]::-ms-track {
     visibility: hidden;
     z-index: -1;
 }
+/* adaptive */
+@media (max-width: 1024px) {
+    .main-slide {
+        height: 504px;
+    }
 
+    .video-jorney-content {
+        padding-bottom: 40px;
+    }
 
+    .to-play img {
+        width: 152px;
+        height: 152px;
+    }
 
+    .video-journey-p {
+        display: none;
+    }
 
+    .youtube-video {
+        width: 300px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-slide {
+        height: 382px;
+    }
+
+    .mini-movies-gallery-container {
+        padding: 20px 0;
+    }
+
+    .video-jorney-content, .movies-gallery-wrapper {
+        padding-bottom: 20px;
+    }
+
+    .to-play img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .youtube-video {
+        width: 354px;
+        height: 199px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-slide {
+        height: 222px;
+    }
+
+    .movies-gallery-wrapper {
+        padding-bottom: 0;
+    }
+
+    .mini-movies-gallery-container {
+        padding: 40px 0;
+    }
+
+    .to-play img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .youtube-video {
+        width: 180px;
+        height: 101px;
+    }
+}
 
