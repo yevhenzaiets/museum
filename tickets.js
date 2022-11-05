@@ -1,4 +1,4 @@
-// get div with number input ;
+// get div with number input 
 const counters = document.querySelectorAll('.block');
 /// get input type radio
 const typeOfTickets = document.querySelectorAll('[type="radio"]');

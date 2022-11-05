@@ -197,14 +197,20 @@ a {
     gap: 6px;
 }
 
-.burger-menu span {
+.burger-menu-exit {
+    width: 25px;
+    height: 25px;
+    background-image: url(assets/png/exit.png);
+}
+
+.burger-spn {
     width: 32px;
     height: 2px;
     background: #FFFFFF;
 }
 
 @media (max-width: 1024px) {
-    .header-menu {
+    .menu-list {
         display: none;
     }
 
@@ -215,7 +221,9 @@ a {
     .header__container {
         display: flex;
         justify-content: space-between;
-        min-height: 131px;
+        max-height: 131px;
+
+        gap: 0;
     } 
 }
 
@@ -244,7 +252,6 @@ a {
 }
 
 /* main louvre style  section virtual tour */
-
 .virtual-tour-places {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

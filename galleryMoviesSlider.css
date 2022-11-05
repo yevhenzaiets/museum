@@ -49,20 +49,13 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    /* column-gap: 42px;
-    left: 0;
-    min-width: 0; */
-}
-
-.mini-movies-gallery-container {
-    position: relative;
 }
 
 .youtube-video {
     width: 452px;
     height: 254px;
 }
-
+/* paginator */
 .movies-paginator {
     display: flex;
     width: 200px;
@@ -72,7 +65,7 @@
     align-items: center;
     padding-top: 40px;
 }
-
+/* paginator bullets */
 .movie-bullets .swiper-pagination-bullet {
     cursor: pointer;
     width: 12px;
@@ -97,7 +90,7 @@
 .prev-movie-arrow, .next-movie-arrow{
     cursor: pointer;
     background: url(./assets/png/Vector\ \(Stroke\).png);
-    width: 10px;
+    width: 12px;
     height: 12px;
 }
 
@@ -207,6 +200,11 @@
         width: 354px;
         height: 199px;
     }
+
+    .movie-bullets .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -230,6 +228,17 @@
     .youtube-video {
         width: 180px;
         height: 101px;
+    }
+
+    .movie-bullets .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .prev-movie-arrow, .next-movie-arrow {
+        background-size: contain;
+        width: 7px;
+        height: 8px;
     }
 }
 

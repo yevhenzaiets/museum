@@ -2,12 +2,8 @@
   position: relative;
 }
 
-.slide {
+.slide, .slider-image {
   display: none; 
-}
-
-.slider-image {
-  display: none;
 }
 
 .slide.active {
@@ -186,6 +182,28 @@
   background: url(./assets/png/btn-hov.png);
 } 
 
+/* move menu */
+
+.move {
+  position: relative;
+  flex-direction: column;
+  left: -470px;
+  top: 300px;
+  z-index: 9999;
+  animation: 1s show ease-out;
+} 
+
+.move li {
+  padding-bottom: 25px;
+  padding-left: 25px;
+} 
+ 
+
+@keyframes show {
+  from { left: -540px; }
+  to { left: -470px; }
+} 
+
 @media (max-width: 1024px) {
   .slide.active {
     min-height: 585px;
@@ -208,7 +226,9 @@
   }
 
   .paginator {
-    width: 700px;
+    justify-content: end;
+    padding-right: 60px;
+    gap: 50px;
   }
 
   .discover-louvre, .discover-louvre a {
@@ -219,6 +239,10 @@
   .discover-louvre a {
     font-size: 20px;
     line-height: 23px;
+  }
+
+  .slide.active {
+    background-position: calc(100% - -25%);
   }
 }
 
