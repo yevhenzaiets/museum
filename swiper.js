@@ -19,14 +19,15 @@ const swiper = new Swiper(".mini-movies-gallery-container", {
     breakpoints: {
       1024: {
         slidesPerView: 3,
-        spaceBetween: 41,
+        spaceBetween: 41
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 20
       },
       420: {
         slidesPerView: 2,
+        spaceBetween: 20
       }
     }
 });

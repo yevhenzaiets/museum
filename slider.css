@@ -183,25 +183,22 @@
 } 
 
 /* move menu */
-
 .move {
   position: relative;
   flex-direction: column;
-  left: -470px;
+  left: -420px;
   top: 300px;
   z-index: 9999;
-  animation: 1s show ease-out;
+  animation: 0.7s show ease-out;
 } 
 
 .move li {
   padding-bottom: 25px;
-  padding-left: 25px;
 } 
- 
-
+/* move menu animation */
 @keyframes show {
-  from { left: -540px; }
-  to { left: -470px; }
+  from { left: -500px; }
+  to { left: -420px; }
 } 
 
 @media (max-width: 1024px) {

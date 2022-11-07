@@ -209,6 +209,15 @@ a {
     background: #FFFFFF;
 }
 
+.vector {
+    display: grid;
+    position: relative;
+    left: -410px;
+    top: 308px;
+    z-index: 9999;
+    animation: 0.7s show ease-out;
+}
+
 @media (max-width: 1024px) {
     .menu-list {
         display: none;
@@ -225,6 +234,11 @@ a {
 
         gap: 0;
     } 
+
+    .header-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
