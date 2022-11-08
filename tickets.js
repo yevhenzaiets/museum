@@ -40,7 +40,6 @@ function setPrice() {
 }
 
 ///// counters
-
 if(counters) {
     setPrice();
     counters.forEach(counter => {
@@ -66,5 +65,4 @@ if(counters) {
             }
         })
     })
-
 }

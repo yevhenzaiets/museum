@@ -168,7 +168,6 @@ function checkWidth () {
 
         menuImg2.style.paddingLeft = "12px";
         menuImg3.style.paddingLeft = "12px";
-
     }
 }
 
