@@ -299,6 +299,34 @@
     font-size: 20px;
     line-height: 40px;
   }
+
+  .move{
+    left: -300px;
+    top: 250px;
+  }
+
+  .vector {
+    left: -284px;
+    top: 257px;
+  }
+
+  @keyframes show {
+    from { left: -400px; }
+    to { left: -300px; }
+  }
+
+  .to-top-menu {
+    padding: 30px 0;
+    align-items: center;
+    position: absolute;
+    top: 915px;
+    background: #030303;
+    left: 0px;
+    width: 100%;
+    justify-content: center;
+    transition: all 1s ease-out;
+  }
+
 }
 
 @media (max-width: 420px) {
