@@ -106,12 +106,16 @@ menu.addEventListener("click", () => {
 
 // menu for 768px
 function checkWidth () {
-    
+
     let paginator = document.querySelector(".paginator");
     const menuFooterWrapper = document.querySelector(".mobile-content");
     const menuFooter = document.createElement('div');
     const footerNav = document.querySelector(".social-networks-contacts");
     const basicSlide = document.querySelector(".slide.active");
+    ///photos 
+    const menuImg1 = document.createElement('img');
+    const menuImg2 = document.createElement('img');
+    const menuImg3 = document.createElement('img');
 
     if (window.screen.width <= 768) {
         /// hide padinator
@@ -119,15 +123,12 @@ function checkWidth () {
         /// add center elem menu
         menuFooter.classList.add("menu-footer");
         /// add photos 
-        const menuImg1 = document.createElement('img');
         menuImg1.src = `assets/png/bm-1.png`;
         menuImg1.alt = `menu1`;
 
-        const menuImg2 = document.createElement('img');
         menuImg2.src = `assets/png/bm-2.png`;
         menuImg2.alt = `menu2`;
 
-        const menuImg3 = document.createElement('img');
         menuImg3.src = `assets/png/bm-3.png`;
         menuImg3.alt = `menu3`;
         /// add style bottom picture
@@ -153,6 +154,21 @@ function checkWidth () {
         /// remove class which show footer elements
         footerNav.classList.remove("to-top-menu");
         menuFooter.classList.remove("menu-footer");
+    }
+
+    if(window.screen.width <= 420) {
+        basicSlide.style.minHeight = "465px";
+        
+        menuImg1.src = `assets/png/fm420-1.png`;
+        menuImg2.src = `assets/png/fm420-2.png`;
+        menuImg3.src = `assets/png/fm420-3.png`;
+
+        menuImg2.style.paddingTop = null;
+        menuImg3.style.paddingTop = null;
+
+        menuImg2.style.paddingLeft = "12px";
+        menuImg3.style.paddingLeft = "12px";
+
     }
 }
 
