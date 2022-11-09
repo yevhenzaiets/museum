@@ -187,10 +187,19 @@
   position: relative;
   flex-direction: column;
   left: -420px;
-  top: 300px;
+  top: 135px;
   z-index: 9999;
   animation: 0.7s show ease-out;
-} 
+}
+
+.vector {
+  display: grid;
+  position: relative;
+  left: -405px;
+  top: 143px;
+  z-index: 9999;
+  animation: 0.7s show ease-out;
+}
 
 .move li {
   padding-bottom: 25px;
@@ -301,27 +310,29 @@
   }
 
   .move{
-    left: -300px;
-    top: 250px;
+    left: -309px;
+    top: 55px;
+    margin: 35px 0;
   }
 
   .vector {
-    left: -284px;
-    top: 257px;
+    left: -299px;
+    top: 62px;
+    margin: 35px 0;
   }
 
   @keyframes show {
-    from { left: -400px; }
-    to { left: -300px; }
+    from { left: -330px; }
+    to { left: -309px; }
   }
 
   .mobile-content {
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 335px 55px 35px 55px;
-
-}
+    margin: 347px 55px 0px 55px;
+    background: black;
+  }
 
   .mobile-content::after {
     content: "";
@@ -337,12 +348,12 @@
     padding: 30px 0;
     align-items: center;
     position: absolute;
-    top: 915px;
+    top: 875px;
     background: #030303;
     left: 0px;
     width: 100%;
     justify-content: center;
-    transition: all 1s ease-out;
+    transition: all 0.7s ease-out;
   }
 }
 
@@ -398,8 +409,8 @@
   }
 
   .move {
-    left: -110px;
-    top: 200px;
+    left: -113px;
+    top: 20px;
   }
 
   .menu-link {
@@ -409,8 +420,8 @@
   }
 
   .vector {
-    left: -90px;
-    top: 207px;
+    left: -100px;
+    top: 26px;
   }
 
   .mobile-content {
@@ -419,12 +430,12 @@
 
   @keyframes show {
     from { left: -140px; }
-    to { left: -110px; }
+    to { left: -113px; }
   }
 
   .to-top-menu {
-    padding: 20px 0;
-    top: 520px;
+    padding: 18px 0;
+    top: 497px;
   }
 
   .mobile-content::after {

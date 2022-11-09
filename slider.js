@@ -146,7 +146,7 @@ function checkWidth () {
     
     if(menu.classList.contains("burger-menu")) {
         /// set up heiht for main slide and show paginator
-        basicSlide.style.minHeight = "760px";
+        // basicSlide.style.minHeight = "760px";
         paginator.style.display = 'flex';
         /// remove child  main menu block
         menuFooter.remove();

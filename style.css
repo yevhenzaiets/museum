@@ -208,15 +208,6 @@ a {
     background: #FFFFFF;
 }
 
-.vector {
-    display: grid;
-    position: relative;
-    left: -410px;
-    top: 308px;
-    z-index: 9999;
-    animation: 0.7s show ease-out;
-}
-
 @media (max-width: 1024px) {
     .menu-list {
         display: none;
@@ -229,19 +220,20 @@ a {
     .header__container {
         display: flex;
         justify-content: space-between;
-        max-height: 130px;
+        min-height: 130px;
         gap: 0;
     } 
 
     .header-menu {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: 0;
     }
 }
 
 @media (max-width: 768px) {
     .header__container {
-        max-height: 110px;
+        min-height: 110px;
     }
 }
 
@@ -260,7 +252,6 @@ a {
         height: 16px;
     }
 }
-
 /* main louvre style  section virtual tour */
 .virtual-tour-places {
     display: grid;
