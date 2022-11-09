@@ -791,14 +791,21 @@ input[type=number]{
     color: #000000;
 }
 
+.order-form-picture {
+    width: 720px;
+    height: 550px;
+    background-image: url("./assets/png/Rectangle.png");
+}
+
 @media (max-width: 1024px) {
     .ticket-type {
         display: none;
     }
 
-    .order-form-picture img {
+    .order-form-picture {
         width: 700px;
         height: 440px;
+        background-image: url("./assets/png/tickets1024.png");
     }
 
     .order-form {
@@ -826,9 +833,10 @@ input[type=number]{
 }
 
 @media (max-width: 768px) {    
-    .order-form-picture img {
+    .order-form-picture {
         width: 444px;
         height: 340px;
+        background-image: url("./assets/png/tickets768.png");
     }
 
     .order-form {
@@ -844,13 +852,13 @@ input[type=number]{
     .total {
         padding: 40px 0;
     }
-
 }
 
 @media (max-width: 420px) {
-    .order-form-picture img {
+    .order-form-picture {
         width: 380px;
         height: 160px;
+        background-image: url("./assets/png/tickets420.png");
     }
 
     .line {
@@ -1030,7 +1038,6 @@ input[type=number]{
         padding: 40px 0 25px 0px;
     }
 }  
-
 /* footer */
 .footer__container__black {
     min-height: 395px;
