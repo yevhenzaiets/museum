@@ -25,7 +25,7 @@ const swiper = new Swiper(".mini-movies-gallery-container", {
         slidesPerView: 2,
         spaceBetween: 20
       },
-      420: {
+      390: {
         slidesPerView: 2,
         spaceBetween: 20
       }

@@ -1202,7 +1202,7 @@ input[type=number]{
     .nav-description-footer {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(3, 1fr);
-        gap: 30px 95px;
+        gap: 30px 85px;
         margin: 40px 0;
     }
     
@@ -1237,7 +1237,6 @@ input[type=number]{
         line-height: 19px;
     }
 }  
-
 /* popup styles */
 .popup {
     position: fixed;
@@ -1253,6 +1252,7 @@ input[type=number]{
 .popup.open {
     opacity: 1;
     visibility: visible;
+    z-index: 9999;
 }
 
 .popup-wrapper {
@@ -1415,7 +1415,7 @@ input[type=number]{
 .overview-tour {
     display: flex;
     justify-content: space-between;
-    padding: 25px 30px;
+    padding: 20px 30px;
 }
 
 .overview-tour-title {
@@ -1512,13 +1512,13 @@ input[type=number]{
     position: absolute;
     left: 0;
     top: 13px;
-    padding: 1px 15px;
+    padding: 0px 15px;
     color: #000;
 }
 
 .name-with-icon input[type=text],.mail-with-icon input[type=text],
 .phone-with-icon input[type=text], .choose-ticket-type, 
-input[type=date], input[type=time] {
+.date, .time{
     padding-left: 40px;
 }
 
@@ -1531,7 +1531,7 @@ input[type=date], input[type=time] {
     color: #030303;
 }
 
-.choose-ticket-type, .phone, .user-name, .e-mail, input[type=date], input[type=time] {
+.choose-ticket-type, .phone, .user-name, .e-mail {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
@@ -1550,7 +1550,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
-.choose-ticket-type, input[type=date], input[type=time] {
+.choose-ticket-type, .date, .time {
     background-image: url(./assets/png/arrow-select.png);
     background-repeat: no-repeat; 
     background-position: calc(100% - 14px) center;
@@ -1558,7 +1558,6 @@ input[type=time]::-webkit-calendar-picker-indicator {
     -moz-appearance: none;
     appearance: none;
 } 
-
 /* tickets-overview */
 .overview-tour-date, .overview-tour-time, .overview-tour-ticket {
     display: flex;
@@ -1566,7 +1565,19 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .date-logo i, .time-logo i, .ticket-logo img {
-    padding-right: 15px;
+    color: #000;
+}
+
+.date-logo, .time-logo {
+    padding-bottom: 5px;
+}
+
+.selected p {
+    padding-left: 15px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
 }
 
 .count-tickets {
@@ -1628,7 +1639,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 /* bookings card */
-
 .front-card {
     position: relative;
     height: 211px;

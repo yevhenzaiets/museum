@@ -359,7 +359,7 @@
                         <div class="popup-body">
                             <div class="tickets-date">
                                 <div class="title-booking-tickets">
-                                    <div class="louvre-logo">
+                                    <div class="louvre-logo-p">
                                         <img src="./assets/png/logo-ticket.png" alt="logo-ticket">
                                     </div>
                                     <div class="booking-tickets">
@@ -374,12 +374,33 @@
                                     <ul class="data-time-info">
                                         <li class="date-with-icon">
                                             <label for="Date"></label>
-                                            <input type="date" class="date" min="2022-05-01" max="2023-05-01" required>
+                                            <input type="text" class="date placeholder" placeholder="Date" required>
                                             <i class="fa-solid fa-calendar-day"></i>
                                         </li>
                                         <li class="time-with-icon">
                                             <label for="Time"></label>
-                                            <input type="time" class="time">
+                                            <input type="text" class="time placeholder" placeholder="Time">
+                                            <datalist id="data-time">
+                                                <option value="09:00"></option>
+                                                <option value="09:30"></option>
+                                                <option value="10:00"></option>
+                                                <option value="10:30"></option>
+                                                <option value="11:00"></option>
+                                                <option value="11:30"></option>
+                                                <option value="12:00"></option>
+                                                <option value="12:30"></option>
+                                                <option value="13:00"></option>
+                                                <option value="13:30"></option>
+                                                <option value="14:00"></option>
+                                                <option value="14:30"></option>
+                                                <option value="15:00"></option>
+                                                <option value="15:30"></option>
+                                                <option value="16:00"></option>
+                                                <option value="16:30"></option>
+                                                <option value="17:00"></option>
+                                                <option value="17:30"></option>
+                                                <option value="18:00"></option>
+                                            </datalist>
                                             <i class="fa-solid fa-clock"></i>
                                         </li>
                                     </ul>
@@ -457,24 +478,24 @@
                                             <div class="date-logo">
                                                 <i class="fa-solid fa-calendar-day"></i>
                                             </div>
-                                            <div class="selected-date">
-                                                <p>DATE</p>
+                                            <div class="selected">
+                                                <p class="set-date">DATE</p>
                                             </div>
                                         </div>
                                         <div class="overview-tour-time">
                                             <div class="time-logo">
                                                 <i class="fa-solid fa-clock"></i>
                                             </div>
-                                            <div class="selected-time">
-                                                <p>TIME</p>
+                                            <div class="selected">
+                                                <p class="set-time">TIME</p>
                                             </div>
                                         </div>
                                         <div class="overview-tour-ticket">
                                             <div class="ticket-logo">
                                                 <img src="./assets/png/add-ticket.png" alt="add-ticket">
                                             </div>
-                                            <div class="ticket-time">
-                                                <p>TICKET</p>
+                                            <div class="selected">
+                                                <p class="set-ticket">TICKET</p>
                                             </div>
                                         </div>
                                     </div>

@@ -145,8 +145,8 @@ function checkWidth () {
     }
     
     if(menu.classList.contains("burger-menu")) {
-        /// set up heiht for main slide and show paginator
-        // basicSlide.style.minHeight = "760px";
+        /// set up height for main slide and show paginator
+        basicSlide.style.minHeight = "760px";
         paginator.style.display = 'flex';
         /// remove child  main menu block
         menuFooter.remove();
@@ -158,14 +158,14 @@ function checkWidth () {
 
     if(window.screen.width <= 420) {
         basicSlide.style.minHeight = "465px";
-        
+        /// add munu img
         menuImg1.src = `assets/png/fm420-1.png`;
         menuImg2.src = `assets/png/fm420-2.png`;
         menuImg3.src = `assets/png/fm420-3.png`;
-
+        /// remove their style 
         menuImg2.style.paddingTop = null;
         menuImg3.style.paddingTop = null;
-
+        /// add new style
         menuImg2.style.paddingLeft = "12px";
         menuImg3.style.paddingLeft = "12px";
     }
