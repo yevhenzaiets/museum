@@ -315,15 +315,15 @@
                                         <h2>Ticket Type</h2>
                                         <fieldset class="tickets-group">
                                             <div class="tickets-type">
-                                                <input type="radio" class="ticket" name="ticket-type" id="r1" checked>
+                                                <input type="radio" class="ticket" name="ticket-type" id="r1" value="20" checked>
                                                 <label for="r1" class="label-radio">Permanent exhibition</label>
                                             </div>
                                             <div class="tickets-type">
-                                                <input type="radio" class="ticket" name="ticket-type" id="r2">
+                                                <input type="radio" class="ticket" name="ticket-type" id="r2" value="25">
                                                 <label for="r2" class="label-radio">Temporary exhibition</label>
                                             </div>
                                             <div class="tickets-type">
-                                                <input type="radio" class="ticket" name="ticket-type" id="r3">
+                                                <input type="radio" class="ticket" name="ticket-type" id="r3" value="40">
                                                 <label for="r3" class="label-radio">Combined Admission</label>
                                             </div>
                                         </fieldset>
@@ -334,7 +334,7 @@
                                             <p>Basic 18+</p>
                                             <div class="block">
                                                 <button class="ticket__button clicable" type="button"><span class="ticket__button_remove">&#8211</span></button>
-                                                <input name="amount" id="basic" type="number" value="1" readonly class="number">
+                                                <input name="amount basic" id="basic" type="number" value="1" readonly class="number">
                                                 <button class="ticket__button clicable" type="button"><span class="ticket__button_add">&#43</span></button>
                                             </div>
                                         </div>
@@ -342,7 +342,7 @@
                                             <p>Senior 65+</p>
                                             <div class="block">
                                                 <button class="ticket__button clicable" type="button"><span class="ticket__button_remove">&#8211</span></button>
-                                                <input name="amount" id="senior" type="number" value="1" readonly class="number">
+                                                <input name="amount senior" id="senior" type="number" value="1" readonly class="number">
                                                 <button class="ticket__button clicable" type="button"><span class="ticket__button_add">&#43</span></button>
                                             </div>
                                         </div>
@@ -433,33 +433,24 @@
                                     </ul>
                                 </div>
                                 <div class="entry-ticket">
-                                    <div class="entry-ticket-title">
-                                        <p>Entry Ticket</p>
-                                    </div>
+                                    <div class="entry-ticket-title"><p>Entry Ticket</p></div>
                                     <div class="entry-ticket-red-line"></div>
                                     <div class="change-tickets">
                                         <div class="basic-ticket">
-                                            <div>
-                                                <p>Basic 18+ (20€)</p>
-                                            </div>
+                                            <div><p>Basic 18+ (20€)</p></div>
                                             <div class="change-ticket-numb">
-                                                <button class="delete-ticket-popup" type="button"
-                                                    onclick="this.nextElementSibling.stepDown()">&#8211</button>
-                                                <input class="number-popup" type="number" min="0" max="20" value="1" readonly>
-                                                <button class="add-ticket-popup" type="button"
-                                                    onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                                <button class="delete-ticket-popup overview" type="button">&#8211</button>
+                                                <input name="amount basic" id="basic" type="number" value="1" readonly class="popup-basic">
+                                                <button class="add-ticket-popup overview" type="button">&#43</button>
+
                                             </div>
                                         </div>
                                         <div class="senior-ticket">
-                                            <div>
-                                                <p>Senior 65+ (10€)</p>
-                                            </div>
+                                            <div><p>Senior 65+ (10€)</p></div>
                                             <div class="change-ticket-numb">
-                                                <button class="delete-ticket-popup" type="button"
-                                                    onclick="this.nextElementSibling.stepDown()">&#8211</button>
-                                                <input class="number-popup" type="number" min="0" max="20" value="1" readonly>
-                                                <button class="add-ticket-popup" type="button"
-                                                    onclick="this.previousElementSibling.stepUp()">&#43</button>
+                                                <button class="delete-ticket-popup overview" type="button">&#8211</button>
+                                                <input name="amount basic" id="basic" type="number" value="1" readonly class="popup-senior">
+                                                <button class="add-ticket-popup overview" type="button">&#43</button>
                                             </div>
                                         </div>
                                     </div>
@@ -468,69 +459,43 @@
                             <div class="tickets-overview">
                                 <div class="overview-tour">
                                     <div class="date-tour-to-louvre">
-                                        <div>
-                                            <p class="overview-tour-title">Overview</p>
-                                        </div>
-                                        <div>
-                                            <p class="overview-tour-title-to-louvre">Tour to Louvre</p>
-                                        </div>
+                                        <div><p class="overview-tour-title">Overview</p></div>
+                                        <div><p class="overview-tour-title-to-louvre">Tour to Louvre</p></div>
                                         <div class="overview-tour-date">
-                                            <div class="date-logo">
-                                                <i class="fa-solid fa-calendar-day"></i>
-                                            </div>
-                                            <div class="selected">
-                                                <p class="set-date">DATE</p>
-                                            </div>
+                                            <div class="date-logo"><i class="fa-solid fa-calendar-day"></i></div>
+                                            <div class="selected"><p class="set-date">DATE</p></div>
                                         </div>
                                         <div class="overview-tour-time">
-                                            <div class="time-logo">
-                                                <i class="fa-solid fa-clock"></i>
-                                            </div>
-                                            <div class="selected">
-                                                <p class="set-time">TIME</p>
-                                            </div>
+                                            <div class="time-logo"><i class="fa-solid fa-clock"></i></div>
+                                            <div class="selected"><p class="set-time">TIME</p></div>
                                         </div>
                                         <div class="overview-tour-ticket">
-                                            <div class="ticket-logo">
-                                                <img src="./assets/png/add-ticket.png" alt="add-ticket">
-                                            </div>
-                                            <div class="selected">
-                                                <p class="set-ticket">TICKET</p>
-                                            </div>
+                                            <div class="ticket-logo"><img src="./assets/png/add-ticket.png" alt="add-ticket"></div>
+                                            <div class="selected"><p class="set-ticket">TICKET</p></div>
                                         </div>
                                     </div>
-                                    <div class="photo-louvre">
-                                        <img src="./assets/png/louvre-ticket.png" alt="louvre">
-                                    </div>
+                                    <div class="photo-louvre"><img src="./assets/png/louvre-ticket.png" alt="louvre"></div>
                                 </div>
                                 <div class="count-tickets">
                                     <div class="basic-count">
                                         <div class="current-count">
-                                            <input type="number" min="0" max="20" value="1">
-                                            <p>Basic (20 €)</p>
+                                            <input type="number" id="basic-count" min="0" max="20" value="1" >
+                                            <p class="overview-basic"></p>
                                         </div>
-                                        <div class="euro">
-                                            <p>EURO</p>
-                                        </div>
+                                        <div class="euro"><p class="basic-cost">EURO</p></div>
                                     </div>
                                     <div class="senior-count">
                                         <div class="current-count">
-                                            <input type="number" min="0" max="20" value="1">
-                                            <p>Senior (10 €)</p>
+                                            <input type="number" id="senior-count" min="0" max="20" value="1" >
+                                            <p class="overview-senior"></p>
                                         </div>
-                                        <div class="euro">
-                                            <p>EURO</p>
-                                        </div>
+                                        <div class="euro"><p class="senior-cost">EURO</p></div>
                                     </div>
                                 </div>
                                 <div class="red-line-popup"></div>
                                 <div class="total-count">
-                                    <div>
-                                        <p>Total:</p>
-                                    </div>
-                                    <div>
-                                        <p>EURO</p>
-                                    </div>
+                                    <div><p>Total:</p></div>
+                                    <div><p class="all-cost">EURO</p></div>
                                 </div>
                                 <div class="card">
                                     <div class="front-card">

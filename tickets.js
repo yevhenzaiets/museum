@@ -3,8 +3,8 @@ const counters = document.querySelectorAll('.block');
 /// get input type radio
 const typeOfTickets = document.querySelectorAll('[type="radio"]');
 /// set up inputs data-attribite (tickets costs)
-const basicAmount = document.querySelector('#basic');
-const seniorAmount = document.querySelector('#senior');
+let basicAmount = document.querySelector('#basic');
+let seniorAmount = document.querySelector('#senior');
 const permanentTicket = document.getElementById("r1");
 const temporaryTicket = document.getElementById("r2");
 const combinedTicket = document.getElementById("r3");
@@ -66,3 +66,4 @@ if(counters) {
         })
     })
 }
+
