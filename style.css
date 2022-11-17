@@ -1880,12 +1880,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 @media (max-width: 420px) {  
-    /* .popup {
-        width: auto;
-    } */
     .popup-body {
-        max-width: 420px;
-        height: auto;
+        padding: 50px 30px;
     }
 
     .booking-tickets {
@@ -1895,10 +1891,11 @@ input[type='number']::-webkit-outer-spin-button {
 
     .tickets-overview {
         width: 360px;
+        height: 885px;
     }
 
     .overview-tour {
-        padding: 15px 20px;
+        padding: 25px 15px;
     }
 
     .photo-louvre img {
@@ -1908,6 +1905,12 @@ input[type='number']::-webkit-outer-spin-button {
 
     .selected p {
         padding-left: 10px;
+        font-size: 17px;
+        line-height: 19px;
+    }
+
+    .count-tickets {
+        padding: 0 15px 10px 15px;
     }
 
     .data-time-info {
@@ -1916,7 +1919,7 @@ input[type='number']::-webkit-outer-spin-button {
         gap: 20px 0;
     }
 
-    .entry-ticket-red-line {
+    .red-line-popup, .entry-ticket-red-line {
         width: 330px;
     }
 
@@ -1937,6 +1940,18 @@ input[type='number']::-webkit-outer-spin-button {
         height: 209px;
     }
 
+    .back-card {
+        left: 15px;
+        bottom: -25px;
+    }
+
+    .black {
+        width: 330px;
+    }
+
+    .confirm-order {
+        bottom: -50px;
+    }
     .enter-card-number p, .expiration-date p, .cardholder-name p {
         font-size: 11px;
         line-height: 13px;
@@ -1950,5 +1965,4 @@ input[type='number']::-webkit-outer-spin-button {
         width: 290px;
         height: 35px;
     }
-
 } 
