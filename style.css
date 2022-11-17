@@ -1335,7 +1335,7 @@ input[type=number]{
 }
 
 .entry-ticket {
-    height: 135px;
+    height: 137px;
     width: 400px;
     border: 1px solid #030303;
     border-radius: 0px;
@@ -1818,17 +1818,22 @@ input[type='number']::-webkit-outer-spin-button {
 }  
 
 @media (max-width: 768px) {  
+    .popup.open {
+        overflow: scroll;
+    }
+
     .popup-body {
         flex-direction: column;
-        padding: 80px 30px 40px 30px;
+        padding: 40px 30px;
     }
 
     .tickets-overview {
-        margin: 50px 0 0 0;
+        margin: 40px 0 0 0;
+        height: 680px;
     }
 
     .data-time-info {
-        padding: 40px 0 20px 0;
+        padding: 30px 0 20px 0;
     }
 
     .date, .time {
@@ -1836,19 +1841,51 @@ input[type='number']::-webkit-outer-spin-button {
         height: 45px;
     }
 
-    .entry-ticket-red-line {
+    .count-tickets {
+        padding: 0 15px 15px 15px;
+    }
+
+    .overview-tour {
+        padding: 25px 15px;
+    }
+
+    .red-line-popup, .entry-ticket-red-line {
         width: 500px;
+    }
+
+    .total-count {
+        padding: 10px 15px;
+    }
+
+    .front-card {
+        margin-left: 15px;
+    }
+
+    .back-card {
+        left: 155px;
+    }
+
+    .confirm-order {
+        right: 15px;
     }
 
     .data-person-info input, .data-person-info select,
     .red-line, .entry-ticket {
         width: 530px;
     }
+
+    .booking-tickets{
+        padding-bottom: 10px;
+    }
 }
 
 @media (max-width: 420px) {  
-    .popup {
+    /* .popup {
         width: auto;
+    } */
+    .popup-body {
+        max-width: 420px;
+        height: auto;
     }
 
     .booking-tickets {
@@ -1857,7 +1894,20 @@ input[type='number']::-webkit-outer-spin-button {
     }
 
     .tickets-overview {
-        margin: 50px 0 0 0;
+        width: 360px;
+    }
+
+    .overview-tour {
+        padding: 15px 20px;
+    }
+
+    .photo-louvre img {
+        width: 120px;
+        height: 96px;
+    }
+
+    .selected p {
+        padding-left: 10px;
     }
 
     .data-time-info {
@@ -1875,4 +1925,30 @@ input[type='number']::-webkit-outer-spin-button {
     .date, .time {
         width: 360px;
     }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .front-card, .back-card {
+        width: 330px;
+        height: 209px;
+    }
+
+    .enter-card-number p, .expiration-date p, .cardholder-name p {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    .experation-date-inputs{
+        gap: 15px;
+    }
+
+    .cardholder-name input {
+        width: 290px;
+        height: 35px;
+    }
+
 } 
